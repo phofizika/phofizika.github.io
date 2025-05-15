@@ -1,0 +1,399 @@
+/* Global Resets & Base Styles */
+:root {
+    --primary-color: #0071e3; /* Apple's vibrant blue */
+    --secondary-color: #1d1d1f; /* Apple's dark text color */
+    --background-light: #f5f5f7; /* Apple's light grey background */
+    --background-white: #ffffff;
+    --text-color-light: #6e6e73; /* Lighter text for secondary info */
+    --border-color: #d2d2d7;
+    /* New variable for logo header background */
+    --logo-header-bg: #202038; /* Dark blue/purple from your logo background */
+    --header-tagline-color: rgba(235, 235, 240, 0.9); /* Clean, slightly off-white for tagline */
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--secondary-color);
+    background-color: var(--background-white);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background-color: var(--logo-header-bg); /* UPDATED: Use logo background color */
+    color: var(--background-white); /* Default text color for header elements */
+    padding: 50px 0 35px; /* UPDATED: Increased padding slightly for larger logo */
+    text-align: center;
+}
+
+/* Style for the logo image */
+#header-logo {
+    display: block; /* Allows margin auto for centering */
+    margin: 0 auto 15px auto; /* Center logo and add space below */
+    max-width: 420px; /* UPDATED: Increased for a larger logo */
+    width: 80%;       /* UPDATED: Adjusted for better responsiveness with new max-width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+header .tagline {
+    font-size: 21px;
+    font-weight: 400;
+    color: var(--header-tagline-color); /* UPDATED: Using a clear light color for tagline */
+    margin: 0;
+}
+
+/* Content Sections */
+.content-section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.content-section.alt-bg {
+    background-color: var(--background-light);
+}
+
+.content-section h2 {
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 20px;
+    letter-spacing: -0.01em;
+}
+
+.content-section .section-intro {
+    font-size: 21px;
+    color: var(--text-color-light);
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    line-height: 1.5;
+}
+
+.content-section p {
+    font-size: 19px;
+    line-height: 1.65;
+    max-width: 700px;
+    margin: 0 auto 20px auto;
+}
+.content-section p em {
+    font-style: italic;
+}
+
+
+/* EXCO Section */
+.exco-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (min-width: 960px) {
+    .exco-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+.exco-member {
+    background-color: var(--background-white);
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    text-align: left;
+}
+
+.exco-member h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: var(--primary-color);
+}
+
+.exco-member p {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: var(--secondary-color);
+    max-width: none;
+    text-align: left;
+}
+.exco-member p:nth-of-type(2) {
+    color: var(--text-color-light);
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.exco-member p.member-bio {
+    font-size: 15px;
+    color: var(--text-color-light);
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+
+/* Syllabus Section */
+.current-class-info {
+    background-color: var(--background-light);
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.current-class-info h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--secondary-color);
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.current-class-info p {
+    font-size: 17px;
+    color: var(--text-color-light);
+    margin-bottom: 5px;
+}
+.current-class-info p strong {
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+
+.syllabus-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    text-align: left;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.syllabus-category {
+    background-color: var(--background-light);
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.syllabus-category h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.syllabus-category ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.syllabus-category li {
+    font-size: 17px;
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.syllabus-category li::before {
+    content: "▹";
+    color: var(--primary-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Call to Action / Join Us Section */
+.call-to-action h2 {
+    margin-bottom: 15px;
+}
+.call-to-action p {
+    font-size: 21px;
+    color: var(--text-color-light);
+    margin-bottom: 30px;
+}
+
+.signup-buttons {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+    color: var(--background-white);
+    padding: 12px 28px;
+    font-size: 17px;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 8px;
+    margin: 10px 5px;
+    transition: background-color 0.2s ease-in-out, transform 0.1s ease;
+    border: 1px solid transparent;
+    min-width: 200px;
+}
+.button svg.icon {
+    margin-right: 8px;
+}
+
+.button:hover {
+    background-color: #0077ed;
+    transform: translateY(-1px);
+}
+.button:active {
+    transform: translateY(0px);
+}
+
+.button.button-secondary {
+    background-color: var(--background-white);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+.button.button-secondary svg.icon {
+    fill: var(--primary-color);
+}
+
+.button.button-secondary:hover {
+    background-color: rgba(0, 113, 227, 0.05);
+}
+
+.community-links {
+    margin-top: 30px;
+}
+.community-links p {
+    font-size: 17px;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+
+/* Contact Us Section */
+#contact {
+    background-color: var(--background-white);
+}
+.contact-details {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.contact-item {
+    display: flex;
+    align-items: center;
+    font-size: 19px;
+    color: var(--secondary-color);
+}
+.contact-item svg.icon {
+    width: 24px;
+    height: 24px;
+    fill: var(--primary-color);
+    margin-right: 12px;
+}
+.contact-item a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+
+/* Footer */
+footer {
+    background-color: var(--background-light);
+    color: var(--text-color-light);
+    padding: 40px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: var(--text-color-light);
+}
+footer p em {
+    font-style: italic;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+    header .tagline {
+        font-size: 18px;
+    }
+    #header-logo {
+        max-width: 350px; /* UPDATED: Increased from 280px */
+        width: 75%;       /* UPDATED: Adjusted for this breakpoint */
+    }
+    .content-section h2 {
+        font-size: 32px;
+    }
+    .content-section .section-intro, .content-section p, .call-to-action p {
+        font-size: 18px;
+    }
+    .exco-member h3, .syllabus-category h3, .current-class-info h3 {
+        font-size: 20px;
+    }
+    .button {
+        padding: 10px 22px;
+        font-size: 16px;
+        min-width: 180px;
+    }
+    .contact-item {
+        font-size: 17px;
+    }
+    .contact-item svg.icon {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    #header-logo {
+        max-width: 280px; /* UPDATED: Increased from 220px */
+        width: 85%;       /* UPDATED: Adjusted from 60% to take more space on small mobile */
+    }
+    .content-section {
+        padding: 60px 0;
+    }
+    .content-section h2 {
+        font-size: 28px;
+    }
+    .content-section .section-intro, .content-section p, .call-to-action p {
+        font-size: 17px;
+    }
+    .button {
+        width: 90%;
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+    }
+    .contact-details {
+        align-items: flex-start;
+        padding-left: 10px;
+    }
+    .contact-item {
+        font-size: 16px;
+    }
+}
