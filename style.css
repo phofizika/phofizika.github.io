@@ -1,14 +1,18 @@
 /* Global Resets & Base Styles */
 :root {
-    --primary-color: #0071e3; /* Apple's vibrant blue */
+    --primary-color: #0071e3; /* Apple's vibrant blue - consider updating to match logo's orange/purple if desired for accents */
     --secondary-color: #1d1d1f; /* Apple's dark text color */
     --background-light: #f5f5f7; /* Apple's light grey background */
     --background-white: #ffffff;
     --text-color-light: #6e6e73; /* Lighter text for secondary info */
     --border-color: #d2d2d7;
-    /* New variable for logo header background */
-    --logo-header-bg: #202038; /* Dark blue/purple from your logo background */
+    /* Updated variable for logo header background to match new logo */
+    --logo-header-bg: #0D1117; /* Very dark desaturated blue/near black from new logo */
     --header-tagline-color: rgba(235, 235, 240, 0.9); /* Clean, slightly off-white for tagline */
+
+    /* Colors from your logo for potential accents if needed */
+    --logo-orange: #F98B29; /* Approximate orange from logo */
+    --logo-purple: #8F4FB3; /* Approximate purple from logo */
 }
 
 body {
@@ -30,27 +34,31 @@ body {
 
 /* Header */
 header {
-    background-color: var(--logo-header-bg); /* UPDATED: Use logo background color */
-    color: var(--background-white); /* Default text color for header elements */
-    padding: 50px 0 35px; /* UPDATED: Increased padding slightly for larger logo */
+    background-color: var(--logo-header-bg); 
+    color: var(--background-white); 
+    padding: 50px 0 35px; 
     text-align: center;
 }
 
-/* Style for the logo image */
 #header-logo {
-    display: block; /* Allows margin auto for centering */
-    margin: 0 auto 15px auto; /* Center logo and add space below */
-    max-width: 420px; /* UPDATED: Increased for a larger logo */
-    width: 80%;       /* UPDATED: Adjusted for better responsiveness with new max-width */
-    height: auto; /* Maintain aspect ratio */
+    display: block; 
+    margin: 0 auto 15px auto; 
+    max-width: 420px; 
+    width: 80%;       
+    height: auto; 
 }
 
 header .tagline {
     font-size: 21px;
     font-weight: 400;
-    color: var(--header-tagline-color); /* UPDATED: Using a clear light color for tagline */
+    color: var(--header-tagline-color); 
     margin: 0;
 }
+header .tagline em {
+    font-style: italic;
+    font-weight: 400; /* Ensure italic has weight if needed */
+}
+
 
 /* Content Sections */
 .content-section {
@@ -89,8 +97,8 @@ header .tagline {
 }
 
 
-/* EXCO Section */
-.exco-grid {
+/* EXCO Section & Instructors Section (reusing styles) */
+.exco-grid { /* This class is used for both exco and instructors grids */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
@@ -105,8 +113,7 @@ header .tagline {
     }
 }
 
-
-.exco-member {
+.exco-member { /* This class is used for both exco and instructor cards */
     background-color: var(--background-white);
     padding: 30px;
     border-radius: 18px;
@@ -119,7 +126,7 @@ header .tagline {
     font-weight: 600;
     margin-top: 0;
     margin-bottom: 5px;
-    color: var(--primary-color);
+    color: var(--logo-orange); /* Using logo orange for headings */
 }
 
 .exco-member p {
@@ -129,7 +136,7 @@ header .tagline {
     max-width: none;
     text-align: left;
 }
-.exco-member p:nth-of-type(2) {
+.exco-member p:nth-of-type(2) { /* Second paragraph (e.g., APhO team / Area of Expertise) */
     color: var(--text-color-light);
     font-size: 15px;
     margin-bottom: 10px;
@@ -143,9 +150,71 @@ header .tagline {
 }
 
 
+/* Olympiad Pathway Section */
+.pathway-container {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the steps and arrows if max-width is applied */
+}
+
+.pathway-step {
+    background-color: var(--background-white); /* White background on alt-bg section for contrast */
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 25px 30px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 650px; 
+    text-align: left;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.07);
+}
+
+.pathway-step h4 {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--logo-purple); /* Using logo purple for pathway step titles */
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.pathway-step p { /* Overriding general content-section p for pathway specifics */
+    font-size: 17px;
+    margin-bottom: 8px;
+    max-width: none; 
+    text-align: left; 
+    line-height: 1.5;
+    color: var(--secondary-color);
+}
+.pathway-step p:last-child {
+    margin-bottom: 0;
+}
+
+.pathway-event {
+    font-weight: 500;
+}
+
+.pathway-timeline, .pathway-outcome, .pathway-note {
+    font-size: 15px;
+    color: var(--text-color-light);
+}
+.pathway-note {
+    margin-top: 10px;
+    font-style: italic;
+}
+
+.pathway-arrow {
+    font-size: 28px;
+    color: var(--text-color-light);
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+
 /* Syllabus Section */
 .current-class-info {
-    background-color: var(--background-light);
+    background-color: var(--background-white); /* Ensure contrast if syllabus section becomes alt-bg */
+    border: 1px solid var(--border-color);
     padding: 25px;
     border-radius: 12px;
     margin-bottom: 40px;
@@ -156,7 +225,7 @@ header .tagline {
 .current-class-info h3 {
     font-size: 24px;
     font-weight: 600;
-    color: var(--secondary-color);
+    color: var(--secondary-color); 
     margin-top: 0;
     margin-bottom: 10px;
 }
@@ -181,7 +250,7 @@ header .tagline {
 }
 
 .syllabus-category {
-    background-color: var(--background-light);
+    background-color: var(--background-light); /* Light grey cards */
     padding: 25px;
     border-radius: 12px;
 }
@@ -189,7 +258,7 @@ header .tagline {
 .syllabus-category h3 {
     font-size: 22px;
     font-weight: 600;
-    color: var(--primary-color);
+    color: var(--primary-color); /* Existing blue for syllabus categories */
     margin-top: 0;
     margin-bottom: 15px;
 }
@@ -235,7 +304,7 @@ header .tagline {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--primary-color);
+    background-color: var(--logo-orange); /* Using logo orange for primary buttons */
     color: var(--background-white);
     padding: 12px 28px;
     font-size: 17px;
@@ -252,7 +321,7 @@ header .tagline {
 }
 
 .button:hover {
-    background-color: #0077ed;
+    background-color: #e07c24; /* Darker shade of logo orange */
     transform: translateY(-1px);
 }
 .button:active {
@@ -261,15 +330,15 @@ header .tagline {
 
 .button.button-secondary {
     background-color: var(--background-white);
-    color: var(--primary-color);
-    border: 1px solid var(--primary-color);
+    color: var(--logo-orange); /* Logo orange for text/border */
+    border: 1px solid var(--logo-orange);
 }
 .button.button-secondary svg.icon {
-    fill: var(--primary-color);
+    fill: var(--logo-orange); /* Ensure secondary button icon is also logo orange */
 }
 
 .button.button-secondary:hover {
-    background-color: rgba(0, 113, 227, 0.05);
+    background-color: rgba(249, 139, 41, 0.08); /* Light orange tint on hover */
 }
 
 .community-links {
@@ -302,11 +371,11 @@ header .tagline {
 .contact-item svg.icon {
     width: 24px;
     height: 24px;
-    fill: var(--primary-color);
+    fill: var(--logo-purple); /* Using logo purple for contact icons */
     margin-right: 12px;
 }
 .contact-item a {
-    color: var(--primary-color);
+    color: var(--logo-purple); /* Using logo purple for contact links */
     text-decoration: none;
     font-weight: 500;
 }
@@ -342,8 +411,8 @@ footer p em {
         font-size: 18px;
     }
     #header-logo {
-        max-width: 350px; /* UPDATED: Increased from 280px */
-        width: 75%;       /* UPDATED: Adjusted for this breakpoint */
+        max-width: 350px; 
+        width: 75%;       
     }
     .content-section h2 {
         font-size: 32px;
@@ -351,7 +420,7 @@ footer p em {
     .content-section .section-intro, .content-section p, .call-to-action p {
         font-size: 18px;
     }
-    .exco-member h3, .syllabus-category h3, .current-class-info h3 {
+    .exco-member h3, .syllabus-category h3, .current-class-info h3, .pathway-step h4 {
         font-size: 20px;
     }
     .button {
@@ -366,12 +435,15 @@ footer p em {
         width: 20px;
         height: 20px;
     }
+    .pathway-step {
+        padding: 20px 25px;
+    }
 }
 
 @media (max-width: 480px) {
     #header-logo {
-        max-width: 280px; /* UPDATED: Increased from 220px */
-        width: 85%;       /* UPDATED: Adjusted from 60% to take more space on small mobile */
+        max-width: 280px; 
+        width: 85%;       
     }
     .content-section {
         padding: 60px 0;
@@ -382,18 +454,27 @@ footer p em {
     .content-section .section-intro, .content-section p, .call-to-action p {
         font-size: 17px;
     }
+    .exco-member h3, .syllabus-category h3, .current-class-info h3, .pathway-step h4 {
+        font-size: 18px; /* Slightly smaller for very small screens */
+    }
     .button {
-        width: 90%;
+        width: 90%; 
         max-width: 300px;
         margin-left: auto;
         margin-right: auto;
-        display: flex;
+        display: flex; 
     }
     .contact-details {
-        align-items: flex-start;
-        padding-left: 10px;
+        align-items: flex-start; 
+        padding-left: 10px; 
     }
     .contact-item {
         font-size: 16px;
+    }
+    .pathway-step {
+        padding: 15px 20px;
+    }
+    .pathway-arrow {
+        font-size: 24px;
     }
 }
