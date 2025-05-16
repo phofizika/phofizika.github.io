@@ -1,24 +1,24 @@
 /* Global Resets & Base Styles */
 :root {
-    --primary-color: #0071e3; /* Apple's vibrant blue - consider updating to match logo's orange/purple if desired for accents */
-    --secondary-color: #1d1d1f; /* Apple's dark text color */
-    --background-light: #f5f5f7; /* Apple's light grey background */
+    --primary-color: #0071e3;
+    --secondary-color: #1d1d1f;
+    --background-light: #f5f5f7;
     --background-white: #ffffff;
-    --text-color-light: #6e6e73; /* Lighter text for secondary info */
+    --text-color-light: #6e6e73;
     --border-color: #d2d2d7;
-    /* Updated variable for logo header background to match new logo */
-    --logo-header-bg: #0D1117; /* Very dark desaturated blue/near black from new logo */
-    --header-tagline-color: rgba(235, 235, 240, 0.9); /* Clean, slightly off-white for tagline */
-
-    /* Colors from your logo for potential accents if needed */
-    --logo-orange: #F98B29; /* Approximate orange from logo */
-    --logo-purple: #8F4FB3; /* Approximate purple from logo */
-
-    --navbar-height: 55px; /* Define navbar height for body padding adjustment */
+    --logo-header-bg: #0D1117;
+    --header-tagline-color: rgba(235, 235, 240, 0.9);
+    --logo-orange: #F98B29;
+    --logo-purple: #8F4FB3;
+    --navbar-height: 55px;
+    --instructor-name-blue: #4A90E2; /* A pleasant, slightly softer blue */
+    --status-not-started-color: #e74c3c; /* Reddish for 'Not Started' */
+    --status-ongoing-color: #2ecc71; /* Green for 'Ongoing' */
+    --status-over-color: #7f8c8d; /* Grey for 'Over' */
 }
 
 html {
-    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+    scroll-behavior: smooth;
 }
 
 body {
@@ -30,7 +30,7 @@ body {
     background-color: var(--background-white);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    padding-top: var(--navbar-height); /* Add padding to body to offset fixed navbar */
+    padding-top: var(--navbar-height);
 }
 
 .container {
@@ -50,11 +50,11 @@ body {
     z-index: 1000;
     border-bottom: 1px solid var(--border-color);
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    display: flex; /* To center the .container inside */
-    align-items: center; /* Vertically center content */
+    display: flex;
+    align-items: center;
 }
 
-#navbar .container { /* Ensure navbar's container also respects max-width */
+#navbar .container {
     width: 100%;
 }
 
@@ -63,23 +63,23 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center; /* Center links */
+    justify-content: center;
     align-items: center;
-    flex-wrap: wrap; /* Allow links to wrap on smaller screens */
+    flex-wrap: wrap;
 }
 
 #navbar li {
-    margin: 0 5px; /* Reduced margin for more links */
+    margin: 0 5px;
 }
 
 #navbar a {
-    color: var(--logo-orange); /* Use logo orange for nav links */
+    color: var(--logo-orange);
     text-decoration: none;
     font-weight: 500;
-    padding: 8px 12px; /* Adjusted padding */
+    padding: 8px 12px;
     border-radius: 6px;
     transition: background-color 0.2s ease, color 0.2s ease;
-    font-size: 15px; /* Slightly smaller for fitting more links */
+    font-size: 15px;
 }
 
 #navbar a:hover,
@@ -95,7 +95,6 @@ header {
     color: var(--background-white);
     padding: 50px 0 35px;
     text-align: center;
-    /* Note: body now has padding-top, so header doesn't need specific margin-top for navbar */
 }
 
 #header-logo {
@@ -123,11 +122,9 @@ header .tagline em {
     padding: 80px 0;
     text-align: center;
 }
-/* Add IDs to sections if they are targets for navbar links */
 .content-section:target {
-    padding-top: calc(var(--navbar-height) + 20px); /* Add padding when targeted */
-    margin-top: calc(-1 * (var(--navbar-height) + 20px)); /* Negative margin to pull it up */
-    /* This helps ensure the title isn't hidden by the fixed navbar when jumping */
+    padding-top: calc(var(--navbar-height) + 20px);
+    margin-top: calc(-1 * (var(--navbar-height) + 20px));
 }
 
 
@@ -150,7 +147,7 @@ header .tagline em {
     margin: 0 auto 40px auto;
     line-height: 1.5;
 }
-.content-section .section-intro em { /* Style for italicized intro text */
+.content-section .section-intro em {
     font-style: italic;
 }
 
@@ -161,16 +158,16 @@ header .tagline em {
     margin: 0 auto 20px auto;
 }
 .content-section p em, .content-section p strong {
-    font-style: italic; /* For any other em tags */
+    font-style: italic;
 }
 .content-section p strong {
-    font-style: normal; /* Reset italic if strong is also em */
+    font-style: normal;
     font-weight: 600;
 }
 
 
 /* EXCO Section & Instructors Section (reusing styles) */
-.exco-grid { /* This class is used for both exco and instructors grids */
+.exco-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
@@ -185,7 +182,7 @@ header .tagline em {
     }
 }
 
-.exco-member { /* This class is used for both exco and instructor cards */
+.exco-member {
     background-color: var(--background-white);
     padding: 30px;
     border-radius: 18px;
@@ -193,13 +190,22 @@ header .tagline em {
     text-align: left;
 }
 
+/* Default color for Exco member names */
+#exco .exco-member h3 {
+    color: var(--logo-orange);
+}
+/* Specific color for Instructor names */
+#instructors .exco-member h3 {
+    color: var(--instructor-name-blue); /* Light blue for instructor names */
+}
+/* Common H3 styles for both sections if any besides color */
 .exco-member h3 {
     font-size: 24px;
     font-weight: 600;
     margin-top: 0;
     margin-bottom: 5px;
-    color: var(--logo-orange); /* Using logo orange for headings */
 }
+
 
 .exco-member p {
     font-size: 16px;
@@ -208,7 +214,7 @@ header .tagline em {
     max-width: none;
     text-align: left;
 }
-.exco-member p:nth-of-type(2) { /* Second paragraph (e.g., APhO team / Area of Expertise) */
+.exco-member p:nth-of-type(2) {
     color: var(--text-color-light);
     font-size: 15px;
     margin-bottom: 10px;
@@ -220,6 +226,9 @@ header .tagline em {
     margin-top: 10px;
     line-height: 1.5;
 }
+.exco-member p.member-bio em { /* Styling for italicized bio text */
+    font-style: italic;
+}
 
 
 /* Olympiad Pathway Section */
@@ -227,11 +236,11 @@ header .tagline em {
     margin-top: 30px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centers the steps and arrows if max-width is applied */
+    align-items: center;
 }
 
 .pathway-step {
-    background-color: var(--background-white); /* White background on alt-bg section for contrast */
+    background-color: var(--background-white);
     border: 1px solid var(--border-color);
     border-radius: 12px;
     padding: 25px 30px;
@@ -245,12 +254,12 @@ header .tagline em {
 .pathway-step h4 {
     font-size: 22px;
     font-weight: 600;
-    color: var(--logo-purple); /* Using logo purple for pathway step titles */
+    color: var(--logo-purple);
     margin-top: 0;
     margin-bottom: 12px;
 }
 
-.pathway-step p { /* Overriding general content-section p for pathway specifics */
+.pathway-step p {
     font-size: 17px;
     margin-bottom: 8px;
     max-width: none;
@@ -282,28 +291,100 @@ header .tagline em {
     font-weight: bold;
 }
 
-/* Styles for Competition Logos in Pathway Section */
 .pathway-logos {
     display: flex;
-    justify-content: space-around; /* Distribute logos evenly */
+    justify-content: space-around;
     align-items: center;
-    flex-wrap: wrap; /* Allow logos to wrap on smaller screens */
-    margin-top: 20px; /* Space above the logos */
+    flex-wrap: wrap;
+    margin-top: 20px;
     padding-top: 15px;
-    border-top: 1px solid var(--border-color); /* Optional separator */
+    border-top: 1px solid var(--border-color);
 }
 
 .pathway-logos img {
-    max-height: 60px; /* Adjust height as needed */
-    width: auto;      /* Maintain aspect ratio */
-    margin: 10px 15px;  /* Spacing around each logo */
-    object-fit: contain; /* Ensures logo is scaled nicely within bounds */
+    max-height: 60px;
+    width: auto;
+    margin: 10px 15px;
+    object-fit: contain;
+}
+
+/* About Olympiads Section */
+#about-olympiads {
+    /* Standard content section padding and alignment */
+}
+
+.olympiad-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+    text-align: left;
+}
+
+.olympiad-card {
+    background-color: var(--background-white);
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+}
+
+.olympiad-logo {
+    max-height: 70px;
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 20px;
+    align-self: center;
+}
+
+.olympiad-card h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--logo-purple);
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.olympiad-card p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+    max-width: none;
+}
+
+.olympiad-card h4 { /* "Why Try?" heading */
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--logo-orange);
+    margin-top: 15px; /* Adjusted margin */
+    margin-bottom: 10px;
+}
+
+.olympiad-card ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.olympiad-card li {
+    font-size: 15px;
+    color: var(--text-color-light);
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.olympiad-card li em { /* For placeholder statistics text */
+    font-style: italic;
+    color: #999;
 }
 
 
 /* Syllabus Section */
 .current-class-info {
-    background-color: var(--background-white); /* Ensure contrast if syllabus section becomes alt-bg */
+    background-color: var(--background-white);
     border: 1px solid var(--border-color);
     padding: 25px;
     border-radius: 12px;
@@ -328,6 +409,20 @@ header .tagline em {
     color: var(--secondary-color);
     font-weight: 500;
 }
+.current-class-info .status-not-started {
+    color: var(--status-not-started-color);
+    font-weight: 500;
+}
+/* Example for other statuses:
+.current-class-info .status-ongoing {
+    color: var(--status-ongoing-color);
+    font-weight: 500;
+}
+.current-class-info .status-over {
+    color: var(--status-over-color);
+    font-weight: 500;
+}
+*/
 
 
 .syllabus-grid {
@@ -340,7 +435,7 @@ header .tagline em {
 }
 
 .syllabus-category {
-    background-color: var(--background-light); /* Light grey cards */
+    background-color: var(--background-light);
     padding: 25px;
     border-radius: 12px;
 }
@@ -348,7 +443,7 @@ header .tagline em {
 .syllabus-category h3 {
     font-size: 22px;
     font-weight: 600;
-    color: var(--logo-purple); /* Changed to logo purple for syllabus categories */
+    color: var(--logo-purple);
     margin-top: 0;
     margin-bottom: 15px;
 }
@@ -368,7 +463,7 @@ header .tagline em {
 
 .syllabus-category li::before {
     content: "▹";
-    color: var(--logo-purple); /* Changed to logo purple */
+    color: var(--logo-purple);
     font-weight: bold;
     position: absolute;
     left: 0;
@@ -394,7 +489,7 @@ header .tagline em {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--logo-orange); /* Using logo orange for primary buttons */
+    background-color: var(--logo-orange);
     color: var(--background-white);
     padding: 12px 28px;
     font-size: 17px;
@@ -411,7 +506,7 @@ header .tagline em {
 }
 
 .button:hover {
-    background-color: #e07c24; /* Darker shade of logo orange */
+    background-color: #e07c24;
     transform: translateY(-1px);
 }
 .button:active {
@@ -420,15 +515,15 @@ header .tagline em {
 
 .button.button-secondary {
     background-color: var(--background-white);
-    color: var(--logo-orange); /* Logo orange for text/border */
+    color: var(--logo-orange);
     border: 1px solid var(--logo-orange);
 }
 .button.button-secondary svg.icon {
-    fill: var(--logo-orange); /* Ensure secondary button icon is also logo orange */
+    fill: var(--logo-orange);
 }
 
 .button.button-secondary:hover {
-    background-color: rgba(249, 139, 41, 0.08); /* Light orange tint on hover */
+    background-color: rgba(249, 139, 41, 0.08);
 }
 
 .community-links {
@@ -443,7 +538,7 @@ header .tagline em {
 
 /* Contact Us Section */
 #contact {
-    background-color: var(--background-white);
+    /* background-color: var(--background-white); Default for non-alt sections */
 }
 .contact-details {
     margin-top: 30px;
@@ -461,11 +556,11 @@ header .tagline em {
 .contact-item svg.icon {
     width: 24px;
     height: 24px;
-    fill: var(--logo-purple); /* Using logo purple for contact icons */
+    fill: var(--logo-purple);
     margin-right: 12px;
 }
 .contact-item a {
-    color: var(--logo-purple); /* Using logo purple for contact links */
+    color: var(--logo-purple);
     text-decoration: none;
     font-weight: 500;
 }
@@ -495,19 +590,19 @@ footer p em {
 /* Responsive adjustments */
 @media (max-width: 768px) { /* Tablet and smaller */
     :root {
-        --navbar-height: auto; /* Allow navbar to grow if links wrap */
+        --navbar-height: auto;
     }
     body {
-        padding-top: 50px; /* A fixed fallback, adjust if navbar wraps significantly */
+        padding-top: 50px;
     }
     #navbar ul {
-        justify-content: space-around; /* Better spacing for wrapped items */
+        justify-content: space-around;
     }
     #navbar li {
-        margin: 3px 5px; /* Adjust margin for wrapped items */
+        margin: 3px 5px;
     }
     #navbar a {
-        font-size: 14px; /* Smaller font for nav links */
+        font-size: 14px;
         padding: 6px 8px;
     }
 
@@ -524,8 +619,11 @@ footer p em {
     .content-section .section-intro, .content-section p, .call-to-action p {
         font-size: 18px;
     }
-    .exco-member h3, .syllabus-category h3, .current-class-info h3, .pathway-step h4 {
+    .exco-member h3, .syllabus-category h3, .current-class-info h3, .pathway-step h4, .olympiad-card h3 {
         font-size: 20px;
+    }
+     .olympiad-card h4 {
+        font-size: 17px;
     }
     .button {
         padding: 10px 22px;
@@ -543,20 +641,26 @@ footer p em {
         padding: 20px 25px;
     }
     .pathway-logos img {
-        max-height: 50px; /* Slightly smaller logos on tablets */
+        max-height: 50px;
         margin: 8px 10px;
+    }
+    .olympiad-logo {
+        max-height: 60px;
+    }
+    .olympiad-card li {
+        font-size: 14px;
     }
 }
 
 @media (max-width: 480px) { /* Mobile */
     body {
-        padding-top: 45px; /* Adjust for potentially smaller navbar on mobile */
+        padding-top: 45px;
     }
     #navbar ul {
         /* Links will wrap and be centered due to flex properties */
     }
     #navbar a {
-        font-size: 13px; /* Even smaller for mobile */
+        font-size: 13px;
         padding: 5px 6px;
     }
 
@@ -573,8 +677,11 @@ footer p em {
     .content-section .section-intro, .content-section p, .call-to-action p {
         font-size: 17px;
     }
-    .exco-member h3, .syllabus-category h3, .current-class-info h3, .pathway-step h4 {
-        font-size: 18px; /* Slightly smaller for very small screens */
+    .exco-member h3, .syllabus-category h3, .current-class-info h3, .pathway-step h4, .olympiad-card h3 {
+        font-size: 18px;
+    }
+    .olympiad-card h4 {
+        font-size: 16px;
     }
     .button {
         width: 90%;
@@ -597,7 +704,16 @@ footer p em {
         font-size: 24px;
     }
     .pathway-logos img {
-        max-height: 40px; /* Smaller logos on mobile */
-        margin: 5px; /* Less margin for wrapped items */
+        max-height: 40px;
+        margin: 5px;
+    }
+    .olympiad-logo {
+        max-height: 50px;
+    }
+    .olympiad-info-grid {
+        grid-template-columns: 1fr; /* Single column for olympiad cards on small screens */
+    }
+    .olympiad-card li {
+        font-size: 14px;
     }
 }
