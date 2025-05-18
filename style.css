@@ -69,17 +69,17 @@ body {
 }
 
 #navbar li {
-    margin: 0 5px;
+    margin: 0 3px; /* Slightly reduced margin for more links */
 }
 
 #navbar a {
     color: var(--logo-orange);
     text-decoration: none;
     font-weight: 500;
-    padding: 8px 12px;
+    padding: 8px 10px; /* Adjusted padding for more links */
     border-radius: 6px;
     transition: background-color 0.2s ease, color 0.2s ease;
-    font-size: 15px;
+    font-size: 14px; /* Slightly smaller font for fitting more links */
 }
 
 #navbar a:hover,
@@ -535,10 +535,64 @@ header .tagline em {
     margin-bottom: 15px;
 }
 
+/* Donation Section */
+#donate {
+    /* Standard content section styles apply */
+}
+
+.donation-details {
+    background-color: var(--background-white); /* White box for details on alt-bg */
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 25px 30px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.06);
+}
+
+.donation-details h4 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--logo-purple);
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.donation-details p {
+    font-size: 17px;
+    color: var(--secondary-color);
+    margin-bottom: 8px;
+    line-height: 1.6;
+    max-width: none; /* Override general p max-width */
+    text-align: left;
+}
+.donation-details p:last-child {
+    margin-bottom: 0;
+}
+.donation-details p strong {
+    font-weight: 500;
+    color: var(--secondary-color);
+}
+.donation-details p em { /* For the transfer remarks suggestion */
+    font-style: italic;
+    color: var(--text-color-light);
+    font-size: 15px;
+}
+
+.thank-you-note {
+    font-style: italic;
+    color: var(--text-color-light);
+    margin-top: 25px;
+}
+
 
 /* Contact Us Section */
 #contact {
-    /* background-color: var(--background-white); Default for non-alt sections */
+    /* background-color: var(--background-light); Swapped with Join Us for alt-bg */
 }
 .contact-details {
     margin-top: 30px;
@@ -619,7 +673,7 @@ footer p em {
     .content-section .section-intro, .content-section p, .call-to-action p {
         font-size: 18px;
     }
-    .exco-member h3, .syllabus-category h3, .current-class-info h3, .pathway-step h4, .olympiad-card h3 {
+    .exco-member h3, .syllabus-category h3, .current-class-info h3, .pathway-step h4, .olympiad-card h3, .donation-details h4 {
         font-size: 20px;
     }
      .olympiad-card h4 {
@@ -650,6 +704,9 @@ footer p em {
     .olympiad-card li {
         font-size: 14px;
     }
+    .donation-details p {
+        font-size: 16px;
+    }
 }
 
 @media (max-width: 480px) { /* Mobile */
@@ -660,8 +717,11 @@ footer p em {
         /* Links will wrap and be centered due to flex properties */
     }
     #navbar a {
-        font-size: 13px;
-        padding: 5px 6px;
+        font-size: 12px; /* Further reduced for more links on mobile */
+        padding: 5px 5px;
+    }
+    #navbar li {
+        margin: 0 2px; /* Tighter margin for mobile nav */
     }
 
     #header-logo {
@@ -677,7 +737,7 @@ footer p em {
     .content-section .section-intro, .content-section p, .call-to-action p {
         font-size: 17px;
     }
-    .exco-member h3, .syllabus-category h3, .current-class-info h3, .pathway-step h4, .olympiad-card h3 {
+    .exco-member h3, .syllabus-category h3, .current-class-info h3, .pathway-step h4, .olympiad-card h3, .donation-details h4 {
         font-size: 18px;
     }
     .olympiad-card h4 {
@@ -715,5 +775,11 @@ footer p em {
     }
     .olympiad-card li {
         font-size: 14px;
+    }
+    .donation-details {
+        padding: 20px;
+    }
+    .donation-details p {
+        font-size: 15px;
     }
 }
