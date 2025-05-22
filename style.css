@@ -69,17 +69,17 @@ body {
 }
 
 #navbar li {
-    margin: 0 2px; /* Even more reduced margin for more links */
+    margin: 0 2px; 
 }
 
 #navbar a {
     color: var(--logo-orange);
     text-decoration: none;
     font-weight: 500;
-    padding: 8px 8px; /* Adjusted padding for more links */
+    padding: 8px 8px; 
     border-radius: 6px;
     transition: background-color 0.2s ease, color 0.2s ease;
-    font-size: 13px; /* Further reduced font size */
+    font-size: 13px; 
 }
 
 #navbar a:hover,
@@ -189,11 +189,11 @@ header .tagline em {
     justify-content: center;
 }
 .impact-number {
-    font-size: 48px; /* Large number */
-    font-weight: 600;
-    color: var(--logo-orange); /* Use accent color */
-    line-height: 1.1;
-    margin-bottom: 8px;
+    font-size: 56px; /* INCREASED for more striking appearance */
+    font-weight: 700; /* Slightly bolder */
+    color: var(--logo-orange); 
+    line-height: 1; /* Adjusted line-height for larger font */
+    margin-bottom: 10px; /* Increased margin */
 }
 .impact-label {
     font-size: 18px;
@@ -232,9 +232,8 @@ header .tagline em {
 }
 /* Specific color for Instructor names */
 #instructors .exco-member h3 {
-    color: var(--instructor-name-blue); /* Light blue for instructor names */
+    color: var(--instructor-name-blue); 
 }
-/* Common H3 styles for both sections if any besides color */
 .exco-member h3 {
     font-size: 24px;
     font-weight: 600;
@@ -262,7 +261,7 @@ header .tagline em {
     margin-top: 10px;
     line-height: 1.5;
 }
-.exco-member p.member-bio em { /* Styling for italicized bio text */
+.exco-member p.member-bio em { 
     font-style: italic;
 }
 
@@ -391,11 +390,11 @@ header .tagline em {
     max-width: none;
 }
 
-.olympiad-card h4 { /* "Why Try?" heading */
+.olympiad-card h4 { 
     font-size: 18px;
     font-weight: 600;
     color: var(--logo-orange);
-    margin-top: 15px; /* Adjusted margin */
+    margin-top: 15px; 
     margin-bottom: 10px;
 }
 
@@ -412,7 +411,7 @@ header .tagline em {
     line-height: 1.5;
 }
 
-.olympiad-card li em { /* For placeholder statistics text */
+.olympiad-card li em { 
     font-style: italic;
     color: #999;
 }
@@ -449,17 +448,6 @@ header .tagline em {
     color: var(--status-not-started-color);
     font-weight: 500;
 }
-/* Example for other statuses:
-.current-class-info .status-ongoing {
-    color: var(--status-ongoing-color);
-    font-weight: 500;
-}
-.current-class-info .status-over {
-    color: var(--status-over-color);
-    font-weight: 500;
-}
-*/
-
 
 .syllabus-grid {
     display: grid;
@@ -577,7 +565,7 @@ header .tagline em {
 }
 
 .donation-details {
-    background-color: var(--background-white); /* White box for details on alt-bg */
+    background-color: var(--background-white); 
     border: 1px solid var(--border-color);
     border-radius: 12px;
     padding: 25px 30px;
@@ -603,7 +591,7 @@ header .tagline em {
     color: var(--secondary-color);
     margin-bottom: 8px;
     line-height: 1.6;
-    max-width: none; /* Override general p max-width */
+    max-width: none; 
     text-align: left;
 }
 .donation-details p:last-child {
@@ -613,7 +601,7 @@ header .tagline em {
     font-weight: 500;
     color: var(--secondary-color);
 }
-.donation-details p em { /* For the transfer remarks suggestion */
+.donation-details p em { 
     font-style: italic;
     color: var(--text-color-light);
     font-size: 15px;
@@ -710,7 +698,7 @@ footer p em {
         font-size: 18px;
     }
     .impact-number {
-        font-size: 40px;
+        font-size: 48px; /* INCREASED for tablet */
     }
     .impact-label {
         font-size: 16px;
@@ -753,17 +741,17 @@ footer p em {
 
 @media (max-width: 480px) { /* Mobile */
     body {
-        padding-top: 45px;
+        padding-top: 45px; 
     }
     #navbar ul {
         /* Links will wrap and be centered due to flex properties */
     }
     #navbar a {
-        font-size: 12px; /* Further reduced for more links on mobile */
+        font-size: 12px; 
         padding: 5px 5px;
     }
     #navbar li {
-        margin: 0 2px; /* Tighter margin for mobile nav */
+        margin: 0 2px; 
     }
 
     #header-logo {
@@ -780,7 +768,7 @@ footer p em {
         font-size: 17px;
     }
     .impact-number {
-        font-size: 36px;
+        font-size: 40px; /* INCREASED for mobile */
     }
     .impact-label {
         font-size: 15px;
@@ -819,7 +807,7 @@ footer p em {
         max-height: 50px;
     }
     .olympiad-info-grid {
-        grid-template-columns: 1fr; /* Single column for olympiad cards on small screens */
+        grid-template-columns: 1fr; 
     }
     .olympiad-card li {
         font-size: 14px;
