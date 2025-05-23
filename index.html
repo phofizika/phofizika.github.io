@@ -129,19 +129,19 @@
                         <h3>D. Mohnishbala</h3>
                         <p>Raffles Institution</p>
                         <p>INSO'25 Singapore Team</p>
-                        <p class="member-bio"><em></em></p>
+                        
                     </div>
                     <div class="exco-member">
                         <h3>Huang Haoyang</h3>
                         <p>Raffles Institution</p>
                         <p>APhO'25 Singapore Team</p>
-                        <p class="member-bio"><em></em></p>
+                        
                     </div>
                     <div class="exco-member">
                         <h3>Gareth Goh</h3>
                         <p>Raffles Institution</p>
                         <p>APhO'25 Singapore Team</p>
-                        <p class="member-bio"><em></em></p>
+                        
                     </div>
                 </div>
             </div>
@@ -360,6 +360,29 @@
 
     <script>
         document.getElementById("currentYear").textContent = new Date().getFullYear();
+    </script>
+
+    <button id="scrollToTopBtn" title="Go to top">&uarr;</button>
+
+    <script>
+        // Get the button
+        let scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            scrollToTopBtn.style.display = "block";
+          } else {
+            scrollToTopBtn.style.display = "none";
+          }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        scrollToTopBtn.onclick = function() {
+          window.scrollTo({top: 0, behavior: 'smooth'});
+        }
     </script>
 
 </body>
