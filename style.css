@@ -218,14 +218,17 @@ header .tagline em {
     text-align: left;
 }
 
+/* Color for team member names */
 #team .exco-member h3 {
     color: var(--team-member-name-blue);
 }
+/* General style for h3 inside exco-member if not overridden by ID specific rule */
 .exco-member h3 {
     font-size: 24px;
     font-weight: 600;
     margin-top: 0;
     margin-bottom: 5px;
+    /* Default color removed from here to ensure ID-specific rule takes precedence */
 }
 
 .exco-member p {
