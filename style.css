@@ -10,7 +10,7 @@
     --logo-orange: #F98B29;
     --logo-purple: #8F4FB3;
     --navbar-height: 55px;
-    --instructor-name-blue: #4A90E2;
+    --team-member-name-blue: #4A90E2;
     --status-not-started-color: #e74c3c;
     --status-ongoing-color: #2ecc71;
     --status-over-color: #7f8c8d;
@@ -67,17 +67,17 @@ body {
 }
 
 #navbar li {
-    margin: 0 2px;
+    margin: 0 10px;
 }
 
 #navbar a {
     color: var(--logo-orange);
     text-decoration: none;
     font-weight: 500;
-    padding: 8px 8px;
+    padding: 8px 12px;
     border-radius: 6px;
     transition: background-color 0.2s ease, color 0.2s ease;
-    font-size: 13px;
+    font-size: 15px;
 }
 
 #navbar a:hover,
@@ -219,7 +219,7 @@ header .tagline em {
 }
 
 #team .exco-member h3 {
-    color: var(--logo-orange);
+    color: var(--team-member-name-blue);
 }
 .exco-member h3 {
     font-size: 24px;
