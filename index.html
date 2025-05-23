@@ -140,7 +140,7 @@
                     <div class="exco-member">
                         <h3>Gareth Goh</h3>
                         <p>Raffles Institution</p>
-                        <p>APhO'25 Singapore Team</p>
+                        <p>SPhO'25 Gold Medalist</p>
                         
                     </div>
                 </div>
@@ -373,15 +373,21 @@
 
         function scrollFunction() {
           if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            scrollToTopBtn.style.display = "block";
+            if (scrollToTopBtn) { // Check if button exists
+                scrollToTopBtn.style.display = "block";
+            }
           } else {
-            scrollToTopBtn.style.display = "none";
+            if (scrollToTopBtn) { // Check if button exists
+                scrollToTopBtn.style.display = "none";
+            }
           }
         }
 
         // When the user clicks on the button, scroll to the top of the document
-        scrollToTopBtn.onclick = function() {
-          window.scrollTo({top: 0, behavior: 'smooth'});
+        if (scrollToTopBtn) { // Check if button exists before adding listener
+            scrollToTopBtn.onclick = function() {
+              window.scrollTo({top: 0, behavior: 'smooth'});
+            }
         }
     </script>
 

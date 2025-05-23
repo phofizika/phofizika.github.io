@@ -4,7 +4,7 @@
     --secondary-color: #1d1d1f;
     --background-light: #f5f5f7;
     --background-white: #ffffff;
-    --text-color-light: #555555; /* Changed from #6e6e73 for better contrast */
+    --text-color-light: #555555; /* Restored for better contrast */
     --border-color: #d2d2d7;
     --logo-header-bg: #0D1117;
     --header-tagline-color: rgba(235, 235, 240, 0.9);
@@ -24,7 +24,7 @@ html {
 body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 17px; /* Base paragraph size */
+    font-size: 17px; /* Base paragraph size (remains 17px as per original spec) */
     line-height: 1.6;
     color: var(--secondary-color);
     background-color: var(--background-white);
@@ -136,12 +136,12 @@ header .tagline em {
     font-size: 40px; /* Significantly larger than other text */
     font-weight: 600;
     margin-top: 0;
-    margin-bottom: 25px; /* Increased for better separation */
+    margin-bottom: 25px; /* Restored for better separation */
     letter-spacing: -0.01em;
 }
 
 .content-section .section-intro {
-    font-size: 20px; /* Slightly reduced for better hierarchy with h2 */
+    font-size: 20px; /* Restored for better hierarchy with h2 */
     color: var(--text-color-light);
     max-width: 700px;
     margin: 0 auto 40px auto;
@@ -152,10 +152,10 @@ header .tagline em {
 }
 
 .content-section p { /* Default paragraph style within sections */
-    font-size: 18px; /* Standardized paragraph size */
+    font-size: 18px; /* Restored standardized paragraph size */
     line-height: 1.65;
     max-width: 700px;
-    margin: 0 auto 22px auto; /* Adjusted margin */
+    margin: 0 auto 22px auto; /* Restored adjusted margin */
 }
 .content-section p em, .content-section p strong {
     font-style: italic;
@@ -238,7 +238,7 @@ header .tagline em {
     font-size: 24px; /* Good size for member names */
     font-weight: 600;
     margin-top: 0;
-    margin-bottom: 8px; /* Increased margin */
+    margin-bottom: 8px; /* Restored increased margin */
 }
 
 
@@ -256,12 +256,12 @@ header .tagline em {
 }
 
 .exco-member p.member-bio {
-    font-size: 15px; /* Kept for bio context */
+    font-size: 15px;
     color: var(--text-color-light);
     margin-top: 10px;
     line-height: 1.5;
 }
-.exco-member p.member-bio em {
+.exco-member p.member-bio em { 
     font-style: italic;
 }
 
@@ -287,7 +287,7 @@ header .tagline em {
 }
 
 .pathway-step h4 {
-    font-size: 20px; /* Reduced for better hierarchy below h3 */
+    font-size: 20px; /* Restored for better hierarchy below h3 */
     font-weight: 600;
     color: var(--logo-purple);
     margin-top: 0;
@@ -307,11 +307,11 @@ header .tagline em {
 }
 
 .pathway-event {
-    font-weight: 500; /* Maintained */
+    font-weight: 500;
 }
 
 .pathway-timeline, .pathway-outcome, .pathway-note {
-    font-size: 15px; /* Maintained for this specific layout */
+    font-size: 15px;
     color: var(--text-color-light);
 }
 .pathway-note {
@@ -374,7 +374,7 @@ header .tagline em {
 }
 
 .olympiad-card h3 {
-    font-size: 22px; /* Good size for card titles */
+    font-size: 22px;
     font-weight: 600;
     color: var(--logo-purple);
     margin-top: 0;
@@ -383,18 +383,18 @@ header .tagline em {
 }
 
 .olympiad-card p {
-    font-size: 16px; /* Maintained for card content */
+    font-size: 16px;
     line-height: 1.6;
     color: var(--secondary-color);
     margin-bottom: 15px;
     max-width: none;
 }
 
-.olympiad-card h4 {
-    font-size: 18px; /* Good size for sub-headings in cards */
+.olympiad-card h4 { 
+    font-size: 18px;
     font-weight: 600;
     color: var(--logo-orange);
-    margin-top: 15px;
+    margin-top: 15px; 
     margin-bottom: 10px;
 }
 
@@ -405,15 +405,15 @@ header .tagline em {
 }
 
 .olympiad-card li {
-    font-size: 16px; /* Increased for better readability */
+    font-size: 16px; /* Restored for better readability */
     color: var(--text-color-light);
     margin-bottom: 8px;
     line-height: 1.5;
 }
 
-.olympiad-card li em {
+.olympiad-card li em { 
     font-style: italic;
-    /* color: #999; Removed to inherit --text-color-light for better contrast */
+    /* color: #999; Restored: Removed to inherit --text-color-light for better contrast */
 }
 
 
@@ -429,14 +429,14 @@ header .tagline em {
     margin-right: auto;
 }
 .current-class-info h3 {
-    font-size: 24px; /* Good size */
+    font-size: 24px;
     font-weight: 600;
     color: var(--secondary-color);
     margin-top: 0;
     margin-bottom: 10px;
 }
 .current-class-info p {
-    font-size: 17px; /* Maintained */
+    font-size: 17px;
     color: var(--text-color-light);
     margin-bottom: 5px;
 }
@@ -446,7 +446,7 @@ header .tagline em {
 }
 .current-class-info .status-not-started {
     color: var(--status-not-started-color);
-    font-weight: 600; /* Increased font weight for more prominence */
+    font-weight: 600; /* Restored: Increased font weight for more prominence */
 }
 
 .syllabus-grid {
@@ -465,7 +465,7 @@ header .tagline em {
 }
 
 .syllabus-category h3 {
-    font-size: 22px; /* Good size */
+    font-size: 22px;
     font-weight: 600;
     color: var(--logo-purple);
     margin-top: 0;
@@ -479,19 +479,19 @@ header .tagline em {
 }
 
 .syllabus-category li {
-    font-size: 17px; /* Maintained */
+    font-size: 17px;
     margin-bottom: 8px;
     padding-left: 20px;
     position: relative;
 }
 
 .syllabus-category li::before {
-    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%238F4FB3' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%238F4FB3' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E"); /* Restored SVG icon */
     position: absolute;
     left: 0;
-    top: 2px; /* Adjusted for better vertical alignment with text */
-    width: 16px; /* Explicit width for SVG */
-    height: 16px; /* Explicit height for SVG */
+    top: 2px; /* Restored: Adjusted for better vertical alignment */
+    width: 16px; /* Restored: Explicit width for SVG */
+    height: 16px; /* Restored: Explicit height for SVG */
 }
 
 /* Call to Action / Join Us Section */
@@ -515,16 +515,16 @@ header .tagline em {
     justify-content: center;
     background-color: var(--logo-orange);
     color: var(--background-white);
-    padding: 14px 32px; /* Increased padding */
+    padding: 14px 32px; /* Restored increased padding */
     font-size: 17px;
-    font-weight: 600; /* Increased font weight */
+    font-weight: 600; /* Restored increased font weight */
     text-decoration: none;
     border-radius: 8px;
     margin: 10px 5px;
-    transition: background-color 0.2s ease-in-out, transform 0.1s ease, box-shadow 0.2s ease; /* Added box-shadow transition */
+    transition: background-color 0.2s ease-in-out, transform 0.1s ease, box-shadow 0.2s ease; /* Restored box-shadow transition */
     border: 1px solid transparent;
     min-width: 200px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Subtle initial shadow */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Restored subtle initial shadow */
 }
 .button svg.icon {
     margin-right: 8px;
@@ -532,12 +532,12 @@ header .tagline em {
 
 .button:hover {
     background-color: #e07c24;
-    transform: translateY(-2px); /* Slightly more lift */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Enhanced shadow on hover */
+    transform: translateY(-2px); /* Restored: Slightly more lift */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Restored: Enhanced shadow on hover */
 }
 .button:active {
     transform: translateY(0px);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Reset shadow on active */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Restored: Reset shadow on active */
 }
 
 .button.button-secondary {
@@ -582,7 +582,7 @@ header .tagline em {
 }
 
 .donation-details h4 {
-    font-size: 20px; /* Good size */
+    font-size: 20px;
     font-weight: 600;
     color: var(--logo-purple);
     margin-top: 0;
@@ -590,23 +590,23 @@ header .tagline em {
 }
 
 .donation-details p {
-    font-size: 17px; /* Maintained */
+    font-size: 17px;
     color: var(--secondary-color);
     margin-bottom: 8px;
     line-height: 1.6;
-    max-width: none;
+    max-width: none; 
     text-align: left;
 }
 .donation-details p:last-child {
     margin-bottom: 0;
 }
 .donation-details p strong {
-    font-weight: 500; /* Maintained */
+    font-weight: 500;
     color: var(--secondary-color);
 }
-.donation-details p em {
+.donation-details p em { 
     font-style: italic;
-    color: var(--text-color-light); /* Will now use the updated --text-color-light */
+    color: var(--text-color-light);
     font-size: 15px;
 }
 
@@ -661,8 +661,8 @@ footer {
 
 footer p {
     margin: 5px 0;
-    font-size: 14px; /* Maintained */
-    color: var(--text-color-light); /* Will now use the updated --text-color-light */
+    font-size: 14px;
+    color: var(--text-color-light);
 }
 footer p em {
     font-style: italic;
@@ -730,10 +730,10 @@ footer p em {
     .impact-label {
         font-size: 16px;
     }
-    .exco-member h3, .syllabus-category h3, .current-class-info h3, .olympiad-card h3, .donation-details h4 { /* .pathway-step h4 removed as it's now 20px base */
+    .exco-member h3, .syllabus-category h3, .current-class-info h3, .olympiad-card h3, .donation-details h4 { /* .pathway-step h4 needs to be included if its base is 20px now */
         font-size: 20px;
     }
-    .pathway-step h4 { /* Specific adjustment for pathway h4 on smaller screens */
+    .pathway-step h4 { /* Restored: Specific adjustment for pathway h4 on smaller screens */
         font-size: 19px;
     }
      .olympiad-card h4 {
@@ -803,10 +803,10 @@ footer p em {
     .impact-label {
         font-size: 15px;
     }
-    .exco-member h3, .syllabus-category h3, .current-class-info h3, .olympiad-card h3, .donation-details h4 { /* .pathway-step h4 removed */
+    .exco-member h3, .syllabus-category h3, .current-class-info h3, .olympiad-card h3, .donation-details h4 { /* .pathway-step h4 needs to be included if its base is 20px now */
         font-size: 18px;
     }
-    .pathway-step h4 { /* Specific adjustment for pathway h4 on mobile */
+    .pathway-step h4 { /* Restored: Specific adjustment for pathway h4 on mobile */
         font-size: 17px;
     }
     .olympiad-card h4 {
@@ -843,7 +843,7 @@ footer p em {
         grid-template-columns: 1fr; 
     }
     .olympiad-card li {
-        font-size: 14px; /* Maintained for mobile */
+        font-size: 14px;
     }
     .donation-details {
         padding: 20px;
