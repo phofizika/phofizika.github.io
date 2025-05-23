@@ -1,4 +1,3 @@
-/* Global Resets & Base Styles */
 :root {
     --primary-color: #0071e3;
     --secondary-color: #1d1d1f;
@@ -11,10 +10,10 @@
     --logo-orange: #F98B29;
     --logo-purple: #8F4FB3;
     --navbar-height: 55px;
-    --instructor-name-blue: #4A90E2; /* A pleasant, slightly softer blue */
-    --status-not-started-color: #e74c3c; /* Reddish for 'Not Started' */
-    --status-ongoing-color: #2ecc71; /* Green for 'Ongoing' */
-    --status-over-color: #7f8c8d; /* Grey for 'Over' */
+    --instructor-name-blue: #4A90E2;
+    --status-not-started-color: #e74c3c;
+    --status-ongoing-color: #2ecc71;
+    --status-over-color: #7f8c8d;
 }
 
 html {
@@ -39,7 +38,6 @@ body {
     padding: 0 20px;
 }
 
-/* Navigation Bar */
 #navbar {
     background-color: var(--background-white);
     position: fixed;
@@ -69,17 +67,17 @@ body {
 }
 
 #navbar li {
-    margin: 0 2px; 
+    margin: 0 2px;
 }
 
 #navbar a {
     color: var(--logo-orange);
     text-decoration: none;
     font-weight: 500;
-    padding: 8px 8px; 
+    padding: 8px 8px;
     border-radius: 6px;
     transition: background-color 0.2s ease, color 0.2s ease;
-    font-size: 13px; 
+    font-size: 13px;
 }
 
 #navbar a:hover,
@@ -88,8 +86,6 @@ body {
     color: var(--background-white);
 }
 
-
-/* Header */
 header {
     background-color: var(--logo-header-bg);
     color: var(--background-white);
@@ -116,8 +112,6 @@ header .tagline em {
     font-weight: 400;
 }
 
-
-/* Content Sections */
 .content-section {
     padding: 80px 0;
     text-align: center;
@@ -126,7 +120,6 @@ header .tagline em {
     padding-top: calc(var(--navbar-height) + 20px);
     margin-top: calc(-1 * (var(--navbar-height) + 20px));
 }
-
 
 .content-section.alt-bg {
     background-color: var(--background-light);
@@ -165,9 +158,7 @@ header .tagline em {
     font-weight: 600;
 }
 
-/* Impact Stats Section */
 #impact {
-    /* Standard content section styles apply */
 }
 .impact-stats-grid {
     display: grid;
@@ -189,20 +180,21 @@ header .tagline em {
     justify-content: center;
 }
 .impact-number {
-    font-size: 56px; /* INCREASED for more striking appearance */
-    font-weight: 700; /* Slightly bolder */
-    color: var(--logo-orange); 
-    line-height: 1; /* Adjusted line-height for larger font */
-    margin-bottom: 10px; /* Increased margin */
+    font-size: 56px;
+    font-weight: 700;
+    color: var(--logo-orange);
+    line-height: 1;
+    margin-bottom: 10px;
 }
 .impact-label {
     font-size: 18px;
     color: var(--text-color-light);
     text-align: center;
 }
+.impact-label i {
+    font-style: italic;
+}
 
-
-/* EXCO Section & Instructors Section (reusing styles) */
 .exco-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -226,13 +218,8 @@ header .tagline em {
     text-align: left;
 }
 
-/* Default color for Exco member names */
-#exco .exco-member h3 {
+#team .exco-member h3 {
     color: var(--logo-orange);
-}
-/* Specific color for Instructor names */
-#instructors .exco-member h3 {
-    color: var(--instructor-name-blue); 
 }
 .exco-member h3 {
     font-size: 24px;
@@ -240,7 +227,6 @@ header .tagline em {
     margin-top: 0;
     margin-bottom: 5px;
 }
-
 
 .exco-member p {
     font-size: 16px;
@@ -261,12 +247,10 @@ header .tagline em {
     margin-top: 10px;
     line-height: 1.5;
 }
-.exco-member p.member-bio em { 
+.exco-member p.member-bio em {
     font-style: italic;
 }
 
-
-/* Olympiad Pathway Section */
 .pathway-container {
     margin-top: 30px;
     display: flex;
@@ -343,9 +327,7 @@ header .tagline em {
     object-fit: contain;
 }
 
-/* About Olympiads Section */
 #about-olympiads {
-    /* Standard content section padding and alignment */
 }
 
 .olympiad-info-grid {
@@ -390,11 +372,11 @@ header .tagline em {
     max-width: none;
 }
 
-.olympiad-card h4 { 
+.olympiad-card h4 {
     font-size: 18px;
     font-weight: 600;
     color: var(--logo-orange);
-    margin-top: 15px; 
+    margin-top: 15px;
     margin-bottom: 10px;
 }
 
@@ -411,13 +393,11 @@ header .tagline em {
     line-height: 1.5;
 }
 
-.olympiad-card li em { 
+.olympiad-card li em {
     font-style: italic;
     color: #999;
 }
 
-
-/* Syllabus Section */
 .current-class-info {
     background-color: var(--background-white);
     border: 1px solid var(--border-color);
@@ -494,7 +474,6 @@ header .tagline em {
     top: 0;
 }
 
-/* Call to Action / Join Us Section */
 .call-to-action h2 {
     margin-bottom: 15px;
 }
@@ -559,13 +538,11 @@ header .tagline em {
     margin-bottom: 15px;
 }
 
-/* Donation Section */
 #donate {
-    /* Standard content section styles apply */
 }
 
 .donation-details {
-    background-color: var(--background-white); 
+    background-color: var(--background-white);
     border: 1px solid var(--border-color);
     border-radius: 12px;
     padding: 25px 30px;
@@ -591,7 +568,7 @@ header .tagline em {
     color: var(--secondary-color);
     margin-bottom: 8px;
     line-height: 1.6;
-    max-width: none; 
+    max-width: none;
     text-align: left;
 }
 .donation-details p:last-child {
@@ -601,7 +578,7 @@ header .tagline em {
     font-weight: 500;
     color: var(--secondary-color);
 }
-.donation-details p em { 
+.donation-details p em {
     font-style: italic;
     color: var(--text-color-light);
     font-size: 15px;
@@ -613,10 +590,7 @@ header .tagline em {
     margin-top: 25px;
 }
 
-
-/* Contact Us Section */
 #contact {
-    /* background-color: var(--background-light); Swapped with Join Us for alt-bg */
 }
 .contact-details {
     margin-top: 30px;
@@ -646,8 +620,6 @@ header .tagline em {
     text-decoration: underline;
 }
 
-
-/* Footer */
 footer {
     background-color: var(--background-light);
     color: var(--text-color-light);
@@ -665,8 +637,7 @@ footer p em {
     font-style: italic;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) { /* Tablet and smaller */
+@media (max-width: 768px) {
     :root {
         --navbar-height: auto;
     }
@@ -698,7 +669,7 @@ footer p em {
         font-size: 18px;
     }
     .impact-number {
-        font-size: 48px; /* INCREASED for tablet */
+        font-size: 48px;
     }
     .impact-label {
         font-size: 16px;
@@ -739,19 +710,18 @@ footer p em {
     }
 }
 
-@media (max-width: 480px) { /* Mobile */
+@media (max-width: 480px) {
     body {
-        padding-top: 45px; 
+        padding-top: 45px;
     }
     #navbar ul {
-        /* Links will wrap and be centered due to flex properties */
     }
     #navbar a {
-        font-size: 12px; 
+        font-size: 12px;
         padding: 5px 5px;
     }
     #navbar li {
-        margin: 0 2px; 
+        margin: 0 2px;
     }
 
     #header-logo {
@@ -768,7 +738,7 @@ footer p em {
         font-size: 17px;
     }
     .impact-number {
-        font-size: 40px; /* INCREASED for mobile */
+        font-size: 40px;
     }
     .impact-label {
         font-size: 15px;
@@ -807,7 +777,7 @@ footer p em {
         max-height: 50px;
     }
     .olympiad-info-grid {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
     }
     .olympiad-card li {
         font-size: 14px;
