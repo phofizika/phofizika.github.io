@@ -32,6 +32,12 @@ body {
     padding-top: var(--navbar-height);
 }
 
+/* Specific styling for body on single post pages if needed */
+body.single-post-page {
+    /* background-color: var(--background-light); */ /* Optionally make entire page background grey */
+}
+
+
 .container {
     max-width: 980px;
     margin: 0 auto;
@@ -706,43 +712,49 @@ footer p em {
     color: var(--logo-purple);
 }
 
-.single-post-page-header {
-    padding-bottom: 30px;
+
+.single-post-title-header {
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+.single-post-title-header .post-header {
     margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
     text-align: center;
 }
-.single-post-page-header .post-title {
+.single-post-title-header .post-title {
     font-size: 38px;
     font-weight: 700;
     color: var(--secondary-color);
     margin-top: 0;
     margin-bottom: 10px;
 }
-.post-meta-simplified {
+.single-post-title-header .post-meta-simplified {
     font-size: 16px;
     color: var(--text-color-light);
     margin-top: 10px;
 }
-.post-meta-simplified .post-author { /* This class is not used in the simplified byline */
-    /* color: var(--logo-orange);
-    font-weight: 500; */
+
+.single-post-body-wrapper {
+    padding-top: 0; 
+    padding-bottom: 60px;
 }
 
-.single-post-content-wrapper {
-    padding-top: 40px; /* Adjust as needed for spacing below grey header */
-    padding-bottom: 40px;
-    background-color: var(--background-white); /* Main content area on white */
-}
 .single-post-container {
     max-width: 800px;
     text-align: left;
     background-color: var(--background-white);
-    padding: 0; /* Remove padding if wrapper section handles it */
-    box-shadow: none; /* Remove shadow if it's just content on white */
-    margin-top: 0;
+    padding: 30px 40px;
+    border-radius: 18px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    margin-top: -60px; 
+    position: relative; 
+    z-index: 10;      
 }
+
 .blog-post-full .post-header {
-    display: none; /* Hide the original post-header inside the white card as it's moved up */
+    display: none; 
 }
 
 .post-content-area {
@@ -906,8 +918,8 @@ footer p em {
     }
 
     .blog-post-summary-card .blog-post-title { font-size: 24px; }
-    .single-post-page-header .post-title { font-size: 32px; }
-    .post-meta-simplified { font-size: 15px; }
+    .single-post-title-header .post-title { font-size: 32px; }
+    .single-post-title-header .post-meta-simplified { font-size: 15px; }
     .post-content-area, .post-content-area p { font-size: 17px; }
     .post-content-area h2 { font-size: 24px; }
     .post-content-area h3 { font-size: 20px; }
@@ -995,11 +1007,11 @@ footer p em {
     .blog-posts-container { gap: 20px; }
     .blog-post-summary-card { padding: 20px; }
     .blog-post-summary-card .blog-post-title { font-size: 22px; }
-    .single-post-page-header .post-title { font-size: 28px; }
-    .post-meta-simplified { font-size: 14px; }
+    .single-post-title-header .post-title { font-size: 28px; } /* Further adjusted for mobile */
+    .single-post-title-header .post-meta-simplified { font-size: 14px; }
     .post-content-area, .post-content-area p { font-size: 16px; }
     .post-content-area h2 { font-size: 22px; }
     .post-content-area h3 { font-size: 19px; }
-    .single-post-content-wrapper { padding-top: 30px; padding-bottom: 30px; }
-    .single-post-container { margin-top: 0; }
+    .single-post-body-wrapper { padding-top: 30px; padding-bottom: 30px; }
+    .single-post-container { margin-top: -40px; /* Adjusted for mobile */ padding: 20px; }
 }
