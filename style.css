@@ -240,7 +240,7 @@ header .tagline em {
     font-size: 15px;
     margin-bottom: 10px;
 }
-.exco-member p strong { /* Style for Founder/Co-Founder text */
+.exco-member p strong {
     font-weight: 600;
     font-style: normal;
     color: var(--secondary-color);
@@ -706,46 +706,43 @@ footer p em {
     color: var(--logo-purple);
 }
 
+.single-post-page-header {
+    padding-bottom: 30px;
+    margin-bottom: 0;
+    text-align: center;
+}
+.single-post-page-header .post-title {
+    font-size: 38px;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.post-meta-simplified {
+    font-size: 16px;
+    color: var(--text-color-light);
+    margin-top: 10px;
+}
+.post-meta-simplified .post-author { /* This class is not used in the simplified byline */
+    /* color: var(--logo-orange);
+    font-weight: 500; */
+}
+
+.single-post-content-wrapper {
+    padding-top: 40px; /* Adjust as needed for spacing below grey header */
+    padding-bottom: 40px;
+    background-color: var(--background-white); /* Main content area on white */
+}
 .single-post-container {
     max-width: 800px;
     text-align: left;
     background-color: var(--background-white);
-    padding: 30px 40px;
-    border-radius: 18px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    margin-top: -40px;
+    padding: 0; /* Remove padding if wrapper section handles it */
+    box-shadow: none; /* Remove shadow if it's just content on white */
+    margin-top: 0;
 }
 .blog-post-full .post-header {
-    margin-bottom: 30px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid var(--border-color);
-    text-align: center;
-}
-.blog-post-full .post-title {
-    font-size: 36px;
-    font-weight: 700;
-    color: var(--logo-purple);
-    margin-top: 0;
-    margin-bottom: 10px;
-}
-.blog-post-full .post-meta {
-    font-size: 15px;
-    color: var(--text-color-light);
-    margin-bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.blog-post-full .post-meta .post-icon {
-    margin-right: 6px;
-    font-size: 1.1em;
-}
-.blog-post-full .post-meta .post-date,
-.blog-post-full .post-meta .post-author {
-    font-weight: 500;
-}
-.blog-post-full .post-author {
-    color: var(--logo-orange);
+    display: none; /* Hide the original post-header inside the white card as it's moved up */
 }
 
 .post-content-area {
@@ -909,7 +906,8 @@ footer p em {
     }
 
     .blog-post-summary-card .blog-post-title { font-size: 24px; }
-    .blog-post-full .post-title { font-size: 30px; }
+    .single-post-page-header .post-title { font-size: 32px; }
+    .post-meta-simplified { font-size: 15px; }
     .post-content-area, .post-content-area p { font-size: 17px; }
     .post-content-area h2 { font-size: 24px; }
     .post-content-area h3 { font-size: 20px; }
@@ -997,9 +995,11 @@ footer p em {
     .blog-posts-container { gap: 20px; }
     .blog-post-summary-card { padding: 20px; }
     .blog-post-summary-card .blog-post-title { font-size: 22px; }
-    .blog-post-full .post-title { font-size: 26px; }
+    .single-post-page-header .post-title { font-size: 28px; }
+    .post-meta-simplified { font-size: 14px; }
     .post-content-area, .post-content-area p { font-size: 16px; }
     .post-content-area h2 { font-size: 22px; }
     .post-content-area h3 { font-size: 19px; }
-    .single-post-container { padding: 20px; margin-top: -20px; }
+    .single-post-content-wrapper { padding-top: 30px; padding-bottom: 30px; }
+    .single-post-container { margin-top: 0; }
 }
