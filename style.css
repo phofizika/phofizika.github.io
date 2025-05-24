@@ -81,7 +81,8 @@ body {
 }
 
 #navbar a:hover,
-#navbar a:focus {
+#navbar a:focus,
+#navbar a.active-page {
     background-color: var(--logo-orange);
     color: var(--background-white);
 }
@@ -633,6 +634,174 @@ footer p em {
     font-style: italic;
 }
 
+
+.blog-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.blog-list-item {
+    background-color: var(--background-white);
+    padding: 25px 30px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    text-align: left;
+}
+.blog-list-item a:first-of-type {
+    text-decoration: none;
+}
+.blog-post-title {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--logo-purple);
+    margin-top: 0;
+    margin-bottom: 10px;
+    transition: color 0.2s ease;
+}
+.blog-list-item a:first-of-type:hover .blog-post-title {
+    color: var(--logo-orange);
+}
+.blog-post-meta {
+    font-size: 14px;
+    color: var(--text-color-light);
+    margin-bottom: 15px;
+}
+.blog-post-excerpt {
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+.read-more-link {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--logo-orange);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+.read-more-link:hover {
+    color: var(--logo-purple);
+}
+
+.single-post-container {
+    max-width: 800px;
+    text-align: left;
+}
+.blog-post .post-header {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+.blog-post .post-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.blog-post .post-meta {
+    font-size: 15px;
+    color: var(--text-color-light);
+    text-align: center;
+    margin-bottom: 0;
+}
+.blog-post .post-meta .post-date,
+.blog-post .post-meta .post-author {
+    font-weight: 500;
+}
+
+.post-content-area {
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--secondary-color);
+}
+.post-content-area p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    max-width: none;
+    text-align: left;
+}
+.post-content-area h2 {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--logo-purple);
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+.post-content-area h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--logo-orange);
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.post-content-area ul, .post-content-area ol {
+    margin-bottom: 20px;
+    padding-left: 30px;
+}
+.post-content-area li {
+    margin-bottom: 10px;
+}
+.post-content-area img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 25px 0;
+    display: block;
+}
+.post-content-area figcaption {
+    font-size: 14px;
+    color: var(--text-color-light);
+    text-align: center;
+    margin-top: -15px;
+    margin-bottom: 25px;
+}
+.post-content-area blockquote {
+    border-left: 4px solid var(--logo-orange);
+    margin: 25px 0 25px 0px;
+    padding: 10px 20px;
+    background-color: var(--background-light);
+    font-style: italic;
+    color: var(--text-color-light);
+}
+.post-content-area code {
+    background-color: #eef;
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-size: 0.9em;
+}
+.post-content-area pre {
+    background-color: #2d2d2d;
+    color: #f8f8f2;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+.back-to-blog-link {
+    display: inline-block;
+    margin-top: 40px;
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--logo-orange);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+.back-to-blog-link:hover {
+    color: var(--logo-purple);
+}
+
+
 @media (max-width: 768px) {
     :root {
         --navbar-height: auto;
@@ -704,6 +873,12 @@ footer p em {
     .donation-details p {
         font-size: 16px;
     }
+
+    .blog-post-title { font-size: 24px; }
+    .blog-post .post-title { font-size: 30px; }
+    .post-content-area, .post-content-area p { font-size: 17px; }
+    .post-content-area h2 { font-size: 24px; }
+    .post-content-area h3 { font-size: 20px; }
 }
 
 @media (max-width: 480px) {
@@ -784,4 +959,11 @@ footer p em {
     .donation-details p {
         font-size: 15px;
     }
+
+    .blog-list-item { padding: 20px; }
+    .blog-post-title { font-size: 22px; }
+    .blog-post .post-title { font-size: 26px; }
+    .post-content-area, .post-content-area p { font-size: 16px; }
+    .post-content-area h2 { font-size: 22px; }
+    .post-content-area h3 { font-size: 19px; }
 }
