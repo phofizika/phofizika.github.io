@@ -32,9 +32,7 @@ body {
     padding-top: var(--navbar-height);
 }
 
-/* Specific styling for body on single post pages if needed */
 body.single-post-page {
-    /* background-color: var(--background-light); */ /* Optionally make entire page background grey */
 }
 
 
@@ -712,7 +710,6 @@ footer p em {
     color: var(--logo-purple);
 }
 
-
 .single-post-title-header {
     padding-top: 60px;
     padding-bottom: 40px;
@@ -737,30 +734,34 @@ footer p em {
 }
 
 .single-post-body-wrapper {
-    padding-top: 0; 
+    padding-top: 40px; 
     padding-bottom: 60px;
 }
 
 .single-post-container {
     max-width: 800px;
     text-align: left;
-    background-color: var(--background-white);
-    padding: 30px 40px;
-    border-radius: 18px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    margin-top: -60px; 
-    position: relative; 
-    z-index: 10;      
+    background-color: transparent; /* Make it transparent */
+    padding: 0; /* Remove padding */
+    border-radius: 0; /* Remove border-radius */
+    box-shadow: none; /* Remove box-shadow */
+    margin-top: 0; /* Reset margin-top */
+    position: static; /* Reset position */
+    z-index: auto; /* Reset z-index */
 }
 
 .blog-post-full .post-header {
-    display: none; 
+    display: none;
 }
 
 .post-content-area {
     font-size: 18px;
     line-height: 1.7;
     color: var(--secondary-color);
+    text-align: left; /* Ensure content aligns left by default */
+    max-width: 700px; /* Same as other text content for consistency */
+    margin-left: auto;
+    margin-right: auto;
 }
 .post-content-area p {
     font-size: 18px;
@@ -775,6 +776,7 @@ footer p em {
     color: var(--logo-purple);
     margin-top: 40px;
     margin-bottom: 15px;
+    text-align: left;
 }
 .post-content-area h3 {
     font-size: 24px;
@@ -782,6 +784,7 @@ footer p em {
     color: var(--logo-orange);
     margin-top: 30px;
     margin-bottom: 10px;
+    text-align: left;
 }
 .post-content-area ul, .post-content-area ol {
     margin-bottom: 20px;
@@ -1007,11 +1010,15 @@ footer p em {
     .blog-posts-container { gap: 20px; }
     .blog-post-summary-card { padding: 20px; }
     .blog-post-summary-card .blog-post-title { font-size: 22px; }
-    .single-post-title-header .post-title { font-size: 28px; } /* Further adjusted for mobile */
+    .single-post-title-header .post-title { font-size: 28px; }
     .single-post-title-header .post-meta-simplified { font-size: 14px; }
     .post-content-area, .post-content-area p { font-size: 16px; }
     .post-content-area h2 { font-size: 22px; }
     .post-content-area h3 { font-size: 19px; }
     .single-post-body-wrapper { padding-top: 30px; padding-bottom: 30px; }
-    .single-post-container { margin-top: -40px; /* Adjusted for mobile */ padding: 20px; }
+    /* .single-post-container { margin-top: -40px; padding: 20px; } */ /* Original rule if card was kept */
+     .single-post-container {
+        margin-top: 0; /* Reset margin as it's no longer a card pulling up */
+        padding: 0 20px; /* Restore horizontal padding directly to the container */
+     }
 }
