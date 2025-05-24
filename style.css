@@ -183,6 +183,9 @@ header .tagline em {
     line-height: 1;
     margin-bottom: 10px;
 }
+.impact-number em {
+    font-style: normal;
+}
 .impact-label {
     font-size: 18px;
     color: var(--text-color-light);
@@ -236,6 +239,11 @@ header .tagline em {
     color: var(--text-color-light);
     font-size: 15px;
     margin-bottom: 10px;
+}
+.exco-member p strong { /* Style for Founder/Co-Founder text */
+    font-weight: 600;
+    font-style: normal;
+    color: var(--secondary-color);
 }
 
 .exco-member p.member-bio {
@@ -634,49 +642,59 @@ footer p em {
     font-style: italic;
 }
 
-
-.blog-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.blog-posts-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
     max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 40px auto 0 auto;
 }
-.blog-list-item {
+.blog-post-summary-card {
     background-color: var(--background-white);
-    padding: 25px 30px;
-    margin-bottom: 25px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     text-align: left;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
-.blog-list-item a:first-of-type {
+.blog-post-summary-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+.blog-card-link {
     text-decoration: none;
 }
-.blog-post-title {
-    font-size: 28px;
+.blog-post-summary-card .blog-post-title {
+    font-size: 26px;
     font-weight: 600;
     color: var(--logo-purple);
     margin-top: 0;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     transition: color 0.2s ease;
 }
-.blog-list-item a:first-of-type:hover .blog-post-title {
+.blog-post-summary-card .blog-card-link:hover .blog-post-title {
     color: var(--logo-orange);
 }
-.blog-post-meta {
+.blog-post-summary-card .blog-post-meta {
     font-size: 14px;
     color: var(--text-color-light);
     margin-bottom: 15px;
+    display: flex;
+    align-items: center;
 }
-.blog-post-excerpt {
+.blog-post-summary-card .post-icon {
+    margin-right: 6px;
+    font-size: 1.1em;
+    color: var(--text-color-light);
+}
+.blog-post-summary-card .blog-post-excerpt {
     font-size: 17px;
     line-height: 1.6;
     color: var(--secondary-color);
     margin-bottom: 20px;
+    max-width: none;
 }
-.read-more-link {
+.blog-post-summary-card .read-more-link {
     display: inline-block;
     font-size: 16px;
     font-weight: 500;
@@ -684,36 +702,50 @@ footer p em {
     text-decoration: none;
     transition: color 0.2s ease;
 }
-.read-more-link:hover {
+.blog-post-summary-card .read-more-link:hover {
     color: var(--logo-purple);
 }
 
 .single-post-container {
     max-width: 800px;
     text-align: left;
+    background-color: var(--background-white);
+    padding: 30px 40px;
+    border-radius: 18px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    margin-top: -40px;
 }
-.blog-post .post-header {
+.blog-post-full .post-header {
     margin-bottom: 30px;
     padding-bottom: 20px;
     border-bottom: 1px solid var(--border-color);
+    text-align: center;
 }
-.blog-post .post-title {
+.blog-post-full .post-title {
     font-size: 36px;
     font-weight: 700;
-    color: var(--secondary-color);
+    color: var(--logo-purple);
     margin-top: 0;
     margin-bottom: 10px;
-    text-align: center;
 }
-.blog-post .post-meta {
+.blog-post-full .post-meta {
     font-size: 15px;
     color: var(--text-color-light);
-    text-align: center;
     margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.blog-post .post-meta .post-date,
-.blog-post .post-meta .post-author {
+.blog-post-full .post-meta .post-icon {
+    margin-right: 6px;
+    font-size: 1.1em;
+}
+.blog-post-full .post-meta .post-date,
+.blog-post-full .post-meta .post-author {
     font-weight: 500;
+}
+.blog-post-full .post-author {
+    color: var(--logo-orange);
 }
 
 .post-content-area {
@@ -745,6 +777,7 @@ footer p em {
 .post-content-area ul, .post-content-area ol {
     margin-bottom: 20px;
     padding-left: 30px;
+    text-align: left;
 }
 .post-content-area li {
     margin-bottom: 10px;
@@ -753,8 +786,9 @@ footer p em {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
-    margin: 25px 0;
+    margin: 25px auto;
     display: block;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 .post-content-area figcaption {
     font-size: 14px;
@@ -874,8 +908,8 @@ footer p em {
         font-size: 16px;
     }
 
-    .blog-post-title { font-size: 24px; }
-    .blog-post .post-title { font-size: 30px; }
+    .blog-post-summary-card .blog-post-title { font-size: 24px; }
+    .blog-post-full .post-title { font-size: 30px; }
     .post-content-area, .post-content-area p { font-size: 17px; }
     .post-content-area h2 { font-size: 24px; }
     .post-content-area h3 { font-size: 20px; }
@@ -960,10 +994,12 @@ footer p em {
         font-size: 15px;
     }
 
-    .blog-list-item { padding: 20px; }
-    .blog-post-title { font-size: 22px; }
-    .blog-post .post-title { font-size: 26px; }
+    .blog-posts-container { gap: 20px; }
+    .blog-post-summary-card { padding: 20px; }
+    .blog-post-summary-card .blog-post-title { font-size: 22px; }
+    .blog-post-full .post-title { font-size: 26px; }
     .post-content-area, .post-content-area p { font-size: 16px; }
     .post-content-area h2 { font-size: 22px; }
     .post-content-area h3 { font-size: 19px; }
+    .single-post-container { padding: 20px; margin-top: -20px; }
 }
