@@ -140,7 +140,7 @@ header .tagline em {
     max-width: 700px;
     margin: 0 auto 40px auto;
     line-height: 1.5;
-    text-align: center; 
+    text-align: center;
 }
 .content-section .section-intro em {
     font-style: italic;
@@ -151,7 +151,7 @@ header .tagline em {
     line-height: 1.65;
     max-width: 700px;
     margin: 0 auto 20px auto;
-    text-align: left; /* Default for most paragraphs */
+    text-align: center; /* CHANGED: Default for general paragraphs in content sections */
 }
 .content-section p em, .content-section p strong {
     font-style: italic;
@@ -160,6 +160,7 @@ header .tagline em {
     font-style: normal;
     font-weight: 600;
 }
+
 
 #impact {
 }
@@ -221,7 +222,7 @@ header .tagline em {
     padding: 30px;
     border-radius: 18px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    text-align: left;
+    text-align: left; /* Keep card content left-aligned */
 }
 
 #team .exco-member h3 {
@@ -239,7 +240,7 @@ header .tagline em {
     margin-bottom: 5px;
     color: var(--secondary-color);
     max-width: none;
-    text-align: left;
+    text-align: left; /* Keep these paragraphs left-aligned within the card */
 }
 .exco-member p:nth-of-type(2) {
     color: var(--text-color-light);
@@ -381,7 +382,7 @@ header .tagline em {
     color: var(--secondary-color);
     margin-bottom: 15px;
     max-width: none;
-    text-align: left; /* Default for cards */
+    text-align: left;
 }
 
 .olympiad-card h4 {
@@ -403,6 +404,7 @@ header .tagline em {
     color: var(--text-color-light);
     margin-bottom: 8px;
     line-height: 1.5;
+    text-align: left; /* Ensure list items in cards are left-aligned */
 }
 
 .olympiad-card li em {
@@ -494,6 +496,7 @@ header .tagline em {
     font-size: 21px;
     color: var(--text-color-light);
     margin-bottom: 30px;
+    text-align: center; /* Ensure this specific paragraph is centered if desired */
 }
 
 .signup-buttons {
@@ -549,6 +552,7 @@ header .tagline em {
     font-size: 17px;
     color: var(--secondary-color);
     margin-bottom: 15px;
+    text-align: center; /* Center this specific paragraph */
 }
 
 #donate {
@@ -736,6 +740,14 @@ footer p em {
     color: var(--text-color-light);
     margin-top: 10px;
 }
+.single-post-title-header h4 { /* Added this to style the byline */
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--text-color-light);
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
 
 .single-post-body-wrapper {
     padding-top: 40px;
@@ -755,6 +767,9 @@ footer p em {
     margin-bottom: 20px;
     max-width: none;
     text-align: justify;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
 }
 .blog-post-content h2 {
     font-size: 28px;
@@ -780,6 +795,9 @@ footer p em {
 .blog-post-content li {
     margin-bottom: 10px;
     text-align: justify;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
 }
 .blog-post-content img {
     max-width: 100%;
@@ -798,12 +816,15 @@ footer p em {
 }
 .blog-post-content blockquote {
     border-left: 4px solid var(--logo-orange);
-    margin: 25px 0 25px 0px;
+    margin: 25px 0;
     padding: 10px 20px;
     background-color: var(--background-light);
     font-style: italic;
     color: var(--text-color-light);
     text-align: justify;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
 }
 .blog-post-content code {
     background-color: #eef;
@@ -912,7 +933,7 @@ footer p em {
 
     .blog-post-summary-card .blog-post-title { font-size: 24px; }
     .single-post-title-header .post-title { font-size: 32px; }
-    .single-post-title-header .post-meta-simplified { font-size: 15px; }
+    .single-post-title-header .post-meta-simplified, .single-post-title-header h4 { font-size: 15px; }
     .blog-post-content p { font-size: 17px; }
     .blog-post-content h2 { font-size: 24px; }
     .blog-post-content h3 { font-size: 20px; }
@@ -1001,7 +1022,7 @@ footer p em {
     .blog-post-summary-card { padding: 20px; }
     .blog-post-summary-card .blog-post-title { font-size: 22px; }
     .single-post-title-header .post-title { font-size: 28px; }
-    .single-post-title-header .post-meta-simplified { font-size: 14px; }
+    .single-post-title-header .post-meta-simplified, .single-post-title-header h4 { font-size: 14px; }
     .blog-post-content p { font-size: 16px; }
     .blog-post-content h2 { font-size: 22px; }
     .blog-post-content h3 { font-size: 19px; }
