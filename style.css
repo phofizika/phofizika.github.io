@@ -1030,3 +1030,8 @@ footer p em {
     text-align: justify;    
     text-justify: inter-word;
 }
+/* ----------  BLOG INDEX EXCERPT  ---------- */
+.blog-post-summary-card .blog-post-excerpt {
+    text-align: justify;       
+    text-justify: inter-word; 
+}
