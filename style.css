@@ -151,7 +151,7 @@ header .tagline em {
     line-height: 1.65;
     max-width: 700px;
     margin: 0 auto 20px auto;
-    text-align: center; /* CHANGED: Default for general paragraphs in content sections */
+    text-align: center; /* Default for general paragraphs in content sections */
 }
 .content-section p em, .content-section p strong {
     font-style: italic;
@@ -160,7 +160,6 @@ header .tagline em {
     font-style: normal;
     font-weight: 600;
 }
-
 
 #impact {
 }
@@ -222,7 +221,7 @@ header .tagline em {
     padding: 30px;
     border-radius: 18px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    text-align: left; /* Keep card content left-aligned */
+    text-align: left;
 }
 
 #team .exco-member h3 {
@@ -240,7 +239,7 @@ header .tagline em {
     margin-bottom: 5px;
     color: var(--secondary-color);
     max-width: none;
-    text-align: left; /* Keep these paragraphs left-aligned within the card */
+    text-align: left;
 }
 .exco-member p:nth-of-type(2) {
     color: var(--text-color-light);
@@ -404,7 +403,7 @@ header .tagline em {
     color: var(--text-color-light);
     margin-bottom: 8px;
     line-height: 1.5;
-    text-align: left; /* Ensure list items in cards are left-aligned */
+    text-align: left;
 }
 
 .olympiad-card li em {
@@ -496,7 +495,7 @@ header .tagline em {
     font-size: 21px;
     color: var(--text-color-light);
     margin-bottom: 30px;
-    text-align: center; /* Ensure this specific paragraph is centered if desired */
+    text-align: center;
 }
 
 .signup-buttons {
@@ -552,7 +551,7 @@ header .tagline em {
     font-size: 17px;
     color: var(--secondary-color);
     margin-bottom: 15px;
-    text-align: center; /* Center this specific paragraph */
+    text-align: center;
 }
 
 #donate {
@@ -735,19 +734,14 @@ footer p em {
     margin-top: 0;
     margin-bottom: 10px;
 }
-.single-post-title-header .post-meta-simplified {
+.single-post-title-header .post-meta-simplified,
+.single-post-title-header h4 { /* Targeting the h4 directly as well */
     font-size: 16px;
+    font-weight: 400; /* Resetting font-weight if h4 was bold by default */
     color: var(--text-color-light);
     margin-top: 10px;
+    margin-bottom: 0; /* Adjusted for byline specifically */
 }
-.single-post-title-header h4 { /* Added this to style the byline */
-    font-size: 16px;
-    font-weight: 400;
-    color: var(--text-color-light);
-    margin-top: 10px;
-    margin-bottom: 0;
-}
-
 
 .single-post-body-wrapper {
     padding-top: 40px;
