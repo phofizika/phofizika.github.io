@@ -32,9 +32,7 @@ body {
     padding-top: var(--navbar-height);
 }
 
-/* Specific styling for body on single post pages if needed */
 body.single-post-page {
-    /* background-color: var(--background-light); */ /* Optionally make entire page background grey */
 }
 
 
@@ -142,6 +140,7 @@ header .tagline em {
     max-width: 700px;
     margin: 0 auto 40px auto;
     line-height: 1.5;
+    text-align: center; /* Default intro text to center */
 }
 .content-section .section-intro em {
     font-style: italic;
@@ -152,6 +151,7 @@ header .tagline em {
     line-height: 1.65;
     max-width: 700px;
     margin: 0 auto 20px auto;
+    text-align: left; /* Default paragraphs to left align */
 }
 .content-section p em, .content-section p strong {
     font-style: italic;
@@ -160,6 +160,12 @@ header .tagline em {
     font-style: normal;
     font-weight: 600;
 }
+
+/* Specific styling for Our Mission paragraphs if still needed, otherwise remove */
+/* #introduction p {
+    text-align: justify;
+} */
+
 
 #impact {
 }
@@ -430,6 +436,7 @@ header .tagline em {
     font-size: 17px;
     color: var(--text-color-light);
     margin-bottom: 5px;
+    text-align: center;
 }
 .current-class-info p strong {
     color: var(--secondary-color);
@@ -712,7 +719,6 @@ footer p em {
     color: var(--logo-purple);
 }
 
-
 .single-post-title-header {
     padding-top: 60px;
     padding-bottom: 40px;
@@ -726,7 +732,7 @@ footer p em {
 .single-post-title-header .post-title {
     font-size: 38px;
     font-weight: 700;
-    color: var(--secondary-color);
+    color: var(--header-tagline-color);
     margin-top: 0;
     margin-bottom: 10px;
 }
@@ -737,61 +743,50 @@ footer p em {
 }
 
 .single-post-body-wrapper {
-    padding-top: 0; 
+    padding-top: 40px;
     padding-bottom: 60px;
 }
 
-.single-post-container {
-    max-width: 800px;
-    text-align: left;
-    background-color: var(--background-white);
-    padding: 30px 40px;
-    border-radius: 18px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    margin-top: -60px; 
-    position: relative; 
-    z-index: 10;      
+.blog-post-content {
+    text-align: left; /* Ensure the article itself aligns left */
+    max-width: 700px; /* Match other content text width */
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.blog-post-full .post-header {
-    display: none; 
-}
-
-.post-content-area {
-    font-size: 18px;
-    line-height: 1.7;
-    color: var(--secondary-color);
-}
-.post-content-area p {
+.blog-post-content p {
     font-size: 18px;
     line-height: 1.7;
     margin-bottom: 20px;
-    max-width: none;
-    text-align: left;
+    max-width: none; /* Allow it to fill the .blog-post-content width */
+    text-align: justify;
 }
-.post-content-area h2 {
+.blog-post-content h2 {
     font-size: 28px;
     font-weight: 600;
     color: var(--logo-purple);
     margin-top: 40px;
     margin-bottom: 15px;
+    text-align: left;
 }
-.post-content-area h3 {
+.blog-post-content h3 {
     font-size: 24px;
     font-weight: 600;
     color: var(--logo-orange);
     margin-top: 30px;
     margin-bottom: 10px;
+    text-align: left;
 }
-.post-content-area ul, .post-content-area ol {
+.blog-post-content ul, .blog-post-content ol {
     margin-bottom: 20px;
     padding-left: 30px;
     text-align: left;
 }
-.post-content-area li {
+.blog-post-content li {
     margin-bottom: 10px;
+    text-align: justify;
 }
-.post-content-area img {
+.blog-post-content img {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
@@ -799,29 +794,30 @@ footer p em {
     display: block;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
-.post-content-area figcaption {
+.blog-post-content figcaption {
     font-size: 14px;
     color: var(--text-color-light);
     text-align: center;
     margin-top: -15px;
     margin-bottom: 25px;
 }
-.post-content-area blockquote {
+.blog-post-content blockquote {
     border-left: 4px solid var(--logo-orange);
     margin: 25px 0 25px 0px;
     padding: 10px 20px;
     background-color: var(--background-light);
     font-style: italic;
     color: var(--text-color-light);
+    text-align: justify;
 }
-.post-content-area code {
+.blog-post-content code {
     background-color: #eef;
     padding: 2px 5px;
     border-radius: 4px;
     font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
     font-size: 0.9em;
 }
-.post-content-area pre {
+.blog-post-content pre {
     background-color: #2d2d2d;
     color: #f8f8f2;
     padding: 15px;
@@ -830,9 +826,11 @@ footer p em {
     font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
     font-size: 0.9em;
     line-height: 1.5;
+    text-align: left;
 }
 .back-to-blog-link {
-    display: inline-block;
+    display: block; /* Changed to block for easier centering if needed */
+    text-align: center; /* Center the link itself */
     margin-top: 40px;
     font-size: 17px;
     font-weight: 500;
@@ -920,9 +918,9 @@ footer p em {
     .blog-post-summary-card .blog-post-title { font-size: 24px; }
     .single-post-title-header .post-title { font-size: 32px; }
     .single-post-title-header .post-meta-simplified { font-size: 15px; }
-    .post-content-area, .post-content-area p { font-size: 17px; }
-    .post-content-area h2 { font-size: 24px; }
-    .post-content-area h3 { font-size: 20px; }
+    .blog-post-content p { font-size: 17px; }
+    .blog-post-content h2 { font-size: 24px; }
+    .blog-post-content h3 { font-size: 20px; }
 }
 
 @media (max-width: 480px) {
@@ -1007,11 +1005,10 @@ footer p em {
     .blog-posts-container { gap: 20px; }
     .blog-post-summary-card { padding: 20px; }
     .blog-post-summary-card .blog-post-title { font-size: 22px; }
-    .single-post-title-header .post-title { font-size: 28px; } /* Further adjusted for mobile */
+    .single-post-title-header .post-title { font-size: 28px; }
     .single-post-title-header .post-meta-simplified { font-size: 14px; }
-    .post-content-area, .post-content-area p { font-size: 16px; }
-    .post-content-area h2 { font-size: 22px; }
-    .post-content-area h3 { font-size: 19px; }
+    .blog-post-content p { font-size: 16px; }
+    .blog-post-content h2 { font-size: 22px; }
+    .blog-post-content h3 { font-size: 19px; }
     .single-post-body-wrapper { padding-top: 30px; padding-bottom: 30px; }
-    .single-post-container { margin-top: -40px; /* Adjusted for mobile */ padding: 20px; }
 }
