@@ -140,7 +140,7 @@ header .tagline em {
     max-width: 700px;
     margin: 0 auto 40px auto;
     line-height: 1.5;
-    text-align: center; /* Default intro text to center */
+    text-align: center; 
 }
 .content-section .section-intro em {
     font-style: italic;
@@ -151,7 +151,7 @@ header .tagline em {
     line-height: 1.65;
     max-width: 700px;
     margin: 0 auto 20px auto;
-    text-align: left; /* Default paragraphs to left align */
+    text-align: left; /* Default for most paragraphs */
 }
 .content-section p em, .content-section p strong {
     font-style: italic;
@@ -160,12 +160,6 @@ header .tagline em {
     font-style: normal;
     font-weight: 600;
 }
-
-/* Specific styling for Our Mission paragraphs if still needed, otherwise remove */
-/* #introduction p {
-    text-align: justify;
-} */
-
 
 #impact {
 }
@@ -387,6 +381,7 @@ header .tagline em {
     color: var(--secondary-color);
     margin-bottom: 15px;
     max-width: none;
+    text-align: left; /* Default for cards */
 }
 
 .olympiad-card h4 {
@@ -748,8 +743,8 @@ footer p em {
 }
 
 .blog-post-content {
-    text-align: left; /* Ensure the article itself aligns left */
-    max-width: 700px; /* Match other content text width */
+    text-align: left;
+    max-width: 700px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -758,7 +753,7 @@ footer p em {
     font-size: 18px;
     line-height: 1.7;
     margin-bottom: 20px;
-    max-width: none; /* Allow it to fill the .blog-post-content width */
+    max-width: none;
     text-align: justify;
 }
 .blog-post-content h2 {
@@ -829,8 +824,8 @@ footer p em {
     text-align: left;
 }
 .back-to-blog-link {
-    display: block; /* Changed to block for easier centering if needed */
-    text-align: center; /* Center the link itself */
+    display: block;
+    text-align: center;
     margin-top: 40px;
     font-size: 17px;
     font-weight: 500;
