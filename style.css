@@ -1022,3 +1022,11 @@ footer p em {
     .blog-post-content h3 { font-size: 19px; }
     .single-post-body-wrapper { padding-top: 30px; padding-bottom: 30px; }
 }
+/* ----------  BLOG-POST BODY TEXT ALIGNMENT  ---------- */
+.single-post-page .blog-post-content,
+.single-post-page .blog-post-content p,
+.single-post-page .blog-post-content li,
+.single-post-page .blog-post-content blockquote {
+    text-align: justify;    
+    text-justify: inter-word;
+}
