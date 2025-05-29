@@ -151,7 +151,7 @@ header .tagline em {
     line-height: 1.65;
     max-width: 700px;
     margin: 0 auto 20px auto;
-    text-align: center; /* Default for general paragraphs in content sections */
+    text-align: center;
 }
 .content-section p em, .content-section p strong {
     font-style: italic;
@@ -189,17 +189,22 @@ header .tagline em {
     line-height: 1;
     margin-bottom: 10px;
 }
-.impact-number em {
-    font-style: normal;
+.impact-number em, .impact-number i { /* Targeting both em and i */
+    font-style: normal; /* Ensure numbers are not italic if wrapped */
 }
 .impact-label {
     font-size: 18px;
     color: var(--text-color-light);
     text-align: center;
 }
+.impact-label strong { /* Ensure label text is bold if wrapped in strong */
+    font-weight: 600;
+    font-style: normal;
+}
 .impact-label i {
     font-style: italic;
 }
+
 
 .exco-grid {
     display: grid;
@@ -225,13 +230,23 @@ header .tagline em {
 }
 
 #team .exco-member h3 {
-    color: var(--team-member-name-blue);
+    /* Color is set by the anchor tag now if present */
 }
+#team .exco-member h3 a { /* NEW RULE for links inside h3 */
+    color: var(--team-member-name-blue);
+    text-decoration: none; /* Remove underline */
+}
+#team .exco-member h3 a:hover {
+    text-decoration: underline; /* Optional: add underline on hover */
+    color: var(--logo-orange); /* Optional: change color on hover */
+}
+
 .exco-member h3 {
     font-size: 24px;
     font-weight: 600;
     margin-top: 0;
     margin-bottom: 5px;
+    color: var(--team-member-name-blue); /* Fallback if not a link */
 }
 
 .exco-member p {
@@ -735,12 +750,12 @@ footer p em {
     margin-bottom: 10px;
 }
 .single-post-title-header .post-meta-simplified,
-.single-post-title-header h4 { /* Targeting the h4 directly as well */
+.single-post-title-header h4 {
     font-size: 16px;
-    font-weight: 400; /* Resetting font-weight if h4 was bold by default */
+    font-weight: 400;
     color: var(--text-color-light);
     margin-top: 10px;
-    margin-bottom: 0; /* Adjusted for byline specifically */
+    margin-bottom: 0;
 }
 
 .single-post-body-wrapper {
@@ -1021,17 +1036,4 @@ footer p em {
     .blog-post-content h2 { font-size: 22px; }
     .blog-post-content h3 { font-size: 19px; }
     .single-post-body-wrapper { padding-top: 30px; padding-bottom: 30px; }
-}
-/* ----------  BLOG-POST BODY TEXT ALIGNMENT  ---------- */
-.single-post-page .blog-post-content,
-.single-post-page .blog-post-content p,
-.single-post-page .blog-post-content li,
-.single-post-page .blog-post-content blockquote {
-    text-align: justify;    
-    text-justify: inter-word;
-}
-/* ----------  BLOG INDEX EXCERPT  ---------- */
-.blog-post-summary-card .blog-post-excerpt {
-    text-align: justify;       
-    text-justify: inter-word; 
 }
