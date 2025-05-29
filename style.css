@@ -1037,3 +1037,8 @@ footer p em {
     .blog-post-content h3 { font-size: 19px; }
     .single-post-body-wrapper { padding-top: 30px; padding-bottom: 30px; }
 }
+/* ----------  BLOG INDEX EXCERPT (override)  ---------- */
+#blog-index .blog-post-summary-card .blog-post-excerpt {
+    text-align: justify !important;   /* wins the cascade battle */
+    text-justify: inter-word;
+}
