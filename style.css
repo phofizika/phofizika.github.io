@@ -1042,3 +1042,38 @@ footer p em {
     text-align: justify !important;   /* wins the cascade battle */
     text-justify: inter-word;
 }
+
+
+/* --- NYC YCM announcement --- */
+#nyc-ycm h2 {
+    margin-bottom: 18px;
+}
+#nyc-ycm .ycm-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    max-width: 980px;
+    margin: 0 auto;
+}
+#nyc-ycm .ycm-logo {
+    flex: 1 1 360px;
+    max-width: 460px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+#nyc-ycm .ycm-description {
+    flex: 1 1 360px;
+    max-width: 520px;
+    margin: 0;                  /* override section-intro margins inside the flex row */
+    text-align: left;           /* sit nicely beside the logo on larger screens */
+}
+@media (max-width: 768px) {
+    #nyc-ycm .ycm-description {
+        text-align: center;     /* stack and center on smaller screens */
+    }
+}
+
